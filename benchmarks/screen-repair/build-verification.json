@@ -1,0 +1,52 @@
+{
+  "at": "2026-10-16T21:27:42.497Z",
+  "checked": [
+    {
+      "file": "main.js",
+      "identical": true
+    },
+    {
+      "file": "preload.js",
+      "identical": true
+    },
+    {
+      "file": "screen-pipeline.js",
+      "identical": true
+    },
+    {
+      "file": "local-ocr.js",
+      "identical": true
+    },
+    {
+      "file": "src/overlay.js",
+      "identical": true
+    },
+    {
+      "file": "src/overlay.html",
+      "identical": true
+    },
+    {
+      "file": "src/overlay.css",
+      "identical": true
+    },
+    {
+      "file": "src/renderer/llm.js",
+      "identical": true
+    },
+    {
+      "file": "scripts/local-ocr-worker.py",
+      "identical": true
+    },
+    {
+      "file": "scripts/screen-ocr.ps1",
+      "identical": true
+    },
+    {
+      "file": "assets/ocr/english-rec.onnx",
+      "identical": true
+    }
+  ],
+  "portable": "dist/LiveDeskAI.exe",
+  "bytes": 348799336,
+  "sha256": "7c3293bd9e721fe252c6aca9ef486e70bd3785c7d573df81f514574f83ccf0e9"
+}

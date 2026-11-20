@@ -1,0 +1,43 @@
+{
+  "createdAt": "2026-10-29T15:43:14.814Z",
+  "model": "qwen3-vl:2b-instruct",
+  "endpoint": "native",
+  "origin": "http://127.0.0.1:11434",
+  "sampleOnly": true,
+  "realScreenCaptured": false,
+  "fixture": "synthetic-question.png",
+  "prompt": "Transcribe the question and instruction visible in this image, exactly. Output only the visible text. Do not answer the question.",
+  "expectedText": "What is dynamic programming? Give a short C++ example.",
+  "parameters": {
+    "think": false,
+    "num_ctx": 8192,
+    "num_predict": 96,
+    "temperature": 0,
+    "timeoutMs": 20000
+  },
+  "note": "One controlled synthetic sample, not a benchmark. Streamed to measure first content token; application native vision uses nonstreaming responses.",
+  "loading": {
+    "ok": true,
+    "totalMs": 32666.5,
+    "ollamaLoadMs": null
+  },
+  "inference": {
+    "ok": true,
+    "headersMs": 6208.5,
+    "firstTokenMs": 6209.3,
+    "firstContentTokenMs": 6209.3,
+    "output": "What is dynamic programming?\nGive a short C++ example.",
+    "thinkingCharacters": 0,
+    "metrics": {
+      "total_duration": 6362707900,
+      "load_duration": 10999100,
+      "prompt_eval_count": 1091,
+      "prompt_eval_duration": 769450000,
+      "eval_count": 13,
+      "eval_duration": 161179000,
+      "done_reason": "stop"
+    },
+    "totalMs": 6369,
+    "exactText": true
+  }
+}

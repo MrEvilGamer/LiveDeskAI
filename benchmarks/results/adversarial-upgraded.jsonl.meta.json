@@ -1,0 +1,47 @@
+{
+  "phase": "upgraded",
+  "model": "qwen3:4b-instruct-2507-q4_K_M",
+  "endpoint": "http://localhost:11434",
+  "sourceSha256": "4ea402093887b4691dd5405f19f9195ebef1025c6aed91ff6f2c205730659725",
+  "retrievalSha256": "8368107a926add5874753417beb25ee96de8a4c2fa0241914b2c23233e514aac",
+  "knowledgeSha256": "74beab20f671151db0f2aa15f1106ba72c724dc32b5b307de553b4f26593533e",
+  "benchmarkSha256": "ee3eb171aae746ce1280040b51b08235489037b9a8d5629fc3740e027d18e447",
+  "node": "v24.21.0",
+  "startedAt": "2026-10-16T18:50:03.432Z",
+  "styles": [
+    "short",
+    "extended"
+  ],
+  "seed": 42,
+  "temperature": 0.2,
+  "contextTokens": 8192,
+  "existing": 0,
+  "ollama": {
+    "version": "0.40.5"
+  },
+  "modelDetails": {
+    "name": "qwen3:4b-instruct-2507-q4_K_M",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "modified_at": "2026-10-12T04:51:35.3123746+05:30",
+    "size": 2497293803,
+    "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "4.0B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 262144,
+      "embedding_length": 2560,
+      "runner": "ggml"
+    },
+    "capabilities": [
+      "tools",
+      "thinking",
+      "completion"
+    ]
+  }
+}

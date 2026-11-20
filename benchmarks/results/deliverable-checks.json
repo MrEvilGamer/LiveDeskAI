@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-16T18:56:05.588Z",
+  "checks": [
+    {
+      "name": "Complete, unique main and adversarial answer pairs",
+      "passed": true
+    },
+    {
+      "name": "Final inference metadata matches current generator, retrieval and knowledge",
+      "passed": true
+    },
+    {
+      "name": "Regression suites and executable oracles passed",
+      "passed": true
+    },
+    {
+      "name": "Final report is complete and flagged candidates have valid separate reviews",
+      "passed": true
+    },
+    {
+      "name": "Packaged executable and source manifest match workspace",
+      "passed": true
+    },
+    {
+      "name": "Curated references retain successful provenance checks",
+      "passed": true
+    }
+  ],
+  "scope": "Artifact consistency and completion checks; does not certify semantic accuracy."
+}

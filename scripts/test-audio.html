@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"></head>
+<body>
+<h1>audio harness</h1>
+<script src="../src/renderer/audio.js"></script>
+<script>
+  window.runTest = async function () {
+    const out = {
+      engineErrors: [],
+      chunkCount: 0,
+      sampleCount: 0,
+      maxRms: 0,
+      chunkSizes: [],
+      ctxStates: [],
+      trackInfo: [],
+      stt: null
+    };
+    const engine = new AudioEngine({
+      onLevel: (kind, rms) => { out.maxRms = Math.max(out.maxRms, rms); },
+      onChunk: (kind, samples, rate) => {
+        out.chunkCount++;
+        out.sampleCount += samples.length;
+        out.chunkSizes.push(Math.round(samples.length / rate));
+        window.__lastChunk = { samples, rate };
+      },
+      onEnded: (kind) => out.engineErrors.push('track ended: ' + kind)
+    });
+    try {
+      const stream = await engine.addSource('system', 0.5);
+      const ctx = engine.sources[0].ctx;
+      out.ctxStates.push(ctx.state);
+      stream.getAudioTracks().forEach((t) => {
+        const s = t.getSettings();
+        out.trackInfo.push({ label: t.label, readyState: t.readyState, settings: s });
+      });
+    } catch (e) {
+      out.engineErrors.push('addSource: ' + (e && e.message ? e.message : String(e)));
+      return out;
+    }
+    // capture for 8 seconds (audio is played by the main process meanwhile)
+    await new Promise((r) => setTimeout(r, 8000));
+    out.ctxStates.push(engine.sources[0] ? engine.sources[0].ctx.state : 'gone');
+
+    // try STT through the app's real IPC path (renderer -> main -> server)
+    if (window.__lastChunk && window.__lastChunk.samples.length) {
+      try {
+        const wav = toWav16k(window.__lastChunk.samples, window.__lastChunk.rate);
+        const res = await window.liveDesk.transcribe({
+          baseUrl: 'http://127.0.0.1:8399/v1',
+          apiKey: '',
+          model: 'base',
+          language: '',
+          audio: new Uint8Array(wav)
+        });
+        out.stt = { path: 'ipc', text: res && res.text };
+      } catch (e) {
+        out.stt = { path: 'ipc', error: String(e && e.message ? e.message : e) };
+      }
+    }
+    return out;
+  };
+</script>
+</body>
+</html>

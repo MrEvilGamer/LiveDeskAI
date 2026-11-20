@@ -1,0 +1,11 @@
+const assert=require('assert/strict'),fs=require('fs'),vm=require('vm');
+const coach=require('../src/coach/technical'),evaluator=require('../src/coach/evaluator');
+const element={classList:{add(){},remove(){}},textContent:''};let rendered='',meta='';
+const ctx=vm.createContext({window:{liveDesk:{}},location:{search:''},document:{querySelector:()=>element},console,performance,Date,setTimeout,clearTimeout,TechnicalCoach:coach,AnswerEvaluator:evaluator});
+vm.runInContext(fs.readFileSync('src/renderer/llm.js','utf8'),ctx);
+vm.runInContext(fs.readFileSync('src/overlay.js','utf8').replace('\ninit();','\n'),ctx);
+ctx.display=t=>rendered=t;ctx.metadata=t=>meta=t;
+ctx.askLLM=(_cfg,_messages,_token,done)=>{done('Arc uses atomic reference counting and makes every inner type thread-safe.',false);return()=>{};};
+vm.runInContext(`cfg={llm:{baseUrl:'http://localhost:11434/v1',model:'mock'},screen:{model:'vision'},behavior:{mode:'interview',verbosity:'short'}};renderAnswer=display;setMeta=metadata;setStatus=()=>{};refreshStrip=()=>{};startAnswer('Does Arc make any contained type thread-safe?');`,ctx);
+assert.match(rendered,/Correction:/);assert.match(rendered,/does not make/);assert.match(meta,/Reference correction/);assert.equal(vm.runInContext('state.answerHistory[0].answer',ctx),rendered);
+console.log('PASS runtime factual veto displays reference correction and never remembers the rejected claim');

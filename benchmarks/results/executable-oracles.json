@@ -1,0 +1,98 @@
+{
+  "at": "2026-10-16T21:27:07.137Z",
+  "versions": {
+    "node": "v24.21.0",
+    "rust": "rustc 1.98.1 (48a229cea 2026-09-01)"
+  },
+  "temporaryDirectory": "C:\\Users\\valen\\AppData\\Local\\Temp\\livedesk-coach-oracles-oSnVEP",
+  "results": [
+    {
+      "name": "CommonJS nextTick and Promise order on installed Node",
+      "passed": true
+    },
+    {
+      "name": "ESM top-level Promise and nextTick order on installed Node",
+      "passed": true
+    },
+    {
+      "name": "Const reassignment throws but object mutation is permitted",
+      "passed": true
+    },
+    {
+      "name": "Promise.all does not cancel another already-started operation",
+      "passed": true
+    },
+    {
+      "name": "Writable false accepts the chunk and emits drain",
+      "passed": true
+    },
+    {
+      "name": "RFC 7636 S256 published PKCE vector",
+      "passed": true
+    },
+    {
+      "name": "Webhook HMAC binds exact raw bytes and detects tampering",
+      "passed": true
+    },
+    {
+      "name": "A decodable signed-token payload can be tampered without signature validity",
+      "passed": true
+    },
+    {
+      "name": "Rust move invalidates String binding",
+      "passed": true
+    },
+    {
+      "name": "Rust returning local reference is rejected",
+      "passed": true
+    },
+    {
+      "name": "Rust Rc is not Send",
+      "passed": true
+    },
+    {
+      "name": "Rust Arc RefCell is not thread-safe shared state",
+      "passed": true
+    },
+    {
+      "name": "Rust Box recursive structure has finite size",
+      "passed": true
+    },
+    {
+      "name": "Rust Result question mark propagates parse error",
+      "passed": true
+    },
+    {
+      "name": "Rust Option question mark needs explicit conversion in Result return",
+      "passed": true
+    },
+    {
+      "name": "Rust owned String return does not dangle",
+      "passed": true
+    },
+    {
+      "name": "Rust RefCell conflicting reentrant borrow panics safely",
+      "passed": true
+    },
+    {
+      "name": "Bash :- substitutes without assignment",
+      "passed": true
+    },
+    {
+      "name": "Bash := assigns the default",
+      "passed": true
+    },
+    {
+      "name": "Bash pipefail reports producer failure",
+      "passed": true
+    },
+    {
+      "name": "SQL NULL and outer-join oracles on SQLite",
+      "passed": true
+    },
+    {
+      "name": "Transactional outbox rollback and duplicate-relay simulation on SQLite",
+      "passed": true
+    }
+  ]
+}

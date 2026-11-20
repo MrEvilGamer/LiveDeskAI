@@ -1,0 +1,77 @@
+{
+  "scope": "Narrow essential-reference criteria, not comprehensive semantic accuracy. Median must be 4; loop task must identify const reassignment and <= bound; Rust must distinguish atomics and Send/Sync.",
+  "checks": [
+    {
+      "phase": "before",
+      "fixture": "median",
+      "repeat": 0,
+      "essentialReferenceCriteria": false
+    },
+    {
+      "phase": "after",
+      "fixture": "median",
+      "repeat": 0,
+      "essentialReferenceCriteria": false
+    },
+    {
+      "phase": "before",
+      "fixture": "code",
+      "repeat": 0,
+      "essentialReferenceCriteria": false
+    },
+    {
+      "phase": "after",
+      "fixture": "code",
+      "repeat": 0,
+      "essentialReferenceCriteria": false
+    },
+    {
+      "phase": "before",
+      "fixture": "rust",
+      "repeat": 0,
+      "essentialReferenceCriteria": true
+    },
+    {
+      "phase": "after",
+      "fixture": "rust",
+      "repeat": 0,
+      "essentialReferenceCriteria": true
+    },
+    {
+      "phase": "after",
+      "fixture": "median",
+      "repeat": 1,
+      "essentialReferenceCriteria": true
+    },
+    {
+      "phase": "before",
+      "fixture": "median",
+      "repeat": 1,
+      "essentialReferenceCriteria": false
+    },
+    {
+      "phase": "after",
+      "fixture": "code",
+      "repeat": 1,
+      "essentialReferenceCriteria": true
+    },
+    {
+      "phase": "before",
+      "fixture": "code",
+      "repeat": 1,
+      "essentialReferenceCriteria": false
+    },
+    {
+      "phase": "after",
+      "fixture": "rust",
+      "repeat": 1,
+      "essentialReferenceCriteria": true
+    },
+    {
+      "phase": "before",
+      "fixture": "rust",
+      "repeat": 1,
+      "essentialReferenceCriteria": true
+    }
+  ]
+}

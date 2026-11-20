@@ -1,0 +1,290 @@
+12.1 AdjacencyMatrix: Representing a Graph by a Matrix
+Next:
+12.2 AdjacencyLists: A Graph
+Up:
+12. Graphs
+Previous:
+12. Graphs
+Contents
+Index
+12
+.
+1
+AdjacencyMatrix: Representing a Graph by a Matrix
+An
+adjacency matrix
+is a way of representing an
+vertex graph
+by an
+matrix,
+, whose entries are boolean
+values.
+The matrix entry
+is defined as
+The adjacency matrix for the graph in Figure
+12.1
+is
+shown in Figure
+12.2
+.
+In this representation, the operations
+,
+, and
+just
+involve setting or reading the matrix entry
+:
+These operations clearly take constant time per operation.
+Figure 12.2:
+A graph and its adjacency matrix.
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+0
+0
+1
+0
+0
+1
+0
+0
+0
+0
+0
+0
+0
+1
+1
+0
+1
+0
+0
+1
+1
+0
+0
+0
+0
+0
+2
+1
+0
+0
+1
+0
+0
+1
+0
+0
+0
+0
+0
+3
+0
+0
+1
+0
+0
+0
+0
+1
+0
+0
+0
+0
+4
+1
+0
+0
+0
+0
+1
+0
+0
+1
+0
+0
+0
+5
+0
+1
+1
+0
+1
+0
+1
+0
+0
+1
+0
+0
+6
+0
+0
+1
+0
+0
+1
+0
+1
+0
+0
+1
+0
+7
+0
+0
+0
+1
+0
+0
+1
+0
+0
+0
+0
+1
+8
+0
+0
+0
+0
+1
+0
+0
+0
+0
+1
+0
+0
+9
+0
+0
+0
+0
+0
+1
+0
+0
+1
+0
+1
+0
+10
+0
+0
+0
+0
+0
+0
+1
+0
+0
+1
+0
+1
+11
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+1
+0
+Where the adjacency matrix performs poorly is with the
+and
+operations.  To implement these, we must scan all
+entries in the corresponding row or column of
+and gather up all the
+indices,
+, where
+, respectively
+, is true.
+These operations clearly take
+time per operation.
+Another drawback of the adjacency matrix representation is that it
+is large.  It stores an
+boolean matrix, so it requires at
+least
+bits of memory.  The implementation here uses a matrix
+of  values so it actually uses on the
+order of
+bytes of memory.  A more careful implementation, which
+packs
+boolean values into each word of memory, could reduce this
+space usage to
+words of memory.
+Theorem
+12
+..
+1
+The AdjacencyMatrix data structure implements the Graph interface.
+An AdjacencyMatrix supports the operations
+,
+, and
+in constant
+  time per operation; and
+, and
+in
+time per operation.
+The space used by an AdjacencyMatrix is
+.
+Despite its high memory requirements and poor performance of the
+and
+operations, an AdjacencyMatrix can still be useful for
+some applications.  In particular, when the graph
+is
+dense
+,
+i.e., it has close to
+edges, then a memory usage of
+may be acceptable.
+The AdjacencyMatrix data structure is also commonly used because
+algebraic operations on the matrix
+can be used to efficiently compute
+properties of the graph
+.  This is a topic for a course on algorithms,
+but we point out one such property here:  If we treat the entries of
+as integers (1 for
+and 0 for
+) and multiply
+by itself
+using matrix multiplication then we get the matrix
+.  Recall,
+from the definition of matrix multiplication, that
+Interpreting this sum in terms of the graph
+, this formula counts the
+number of vertices,
+, such that
+contains both edges
+and
+.  That is, it counts the number of paths from
+to
+(through intermediate vertices,
+) whose length is exactly two.
+This observation is the foundation of an algorithm that computes the
+shortest paths between all pairs of vertices in
+using only
+matrix multiplications.
+Next:
+12.2 AdjacencyLists: A Graph
+Up:
+12. Graphs
+Previous:
+12. Graphs
+Contents
+Index
+opendatastructures.org

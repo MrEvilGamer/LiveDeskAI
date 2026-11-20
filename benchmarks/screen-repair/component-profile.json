@@ -1,0 +1,611 @@
+{
+  "summary": {
+    "at": "2026-10-16T21:08:32.205Z",
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "visionModel": "qwen3-vl:2b-instruct",
+    "scope": "Same synthetic practice images. Complete controlled pipeline includes fixture encoding, actual OCR/vision, unchanged technical prompts, local model generation, deterministic verification and actual Electron DOM rendering. Real desktop capture is measured separately and its pixel data is discarded. Small sample; no universal latency guarantee.",
+    "phases": {
+      "before": {
+        "samples": 6,
+        "failures": 0,
+        "total": {
+          "p50": 9662.609100000001,
+          "p95": 10976.4441,
+          "worst": 11345.8001
+        },
+        "extraction": {
+          "p50": 4228.006000000001,
+          "p95": 4403.2955,
+          "worst": 4813.091899999999
+        },
+        "generation": {
+          "p50": 2421.514,
+          "p95": 3659.287,
+          "worst": 4084.118
+        },
+        "ttft": {
+          "p50": 3025.5829999999987,
+          "p95": 3059.725900000005,
+          "worst": 3070.8134000000064
+        },
+        "verification": {
+          "p50": 0.6278999999994994,
+          "p95": 0.9261999999980617,
+          "worst": 0.9302000000025146
+        },
+        "rendering": {
+          "p50": 0.5,
+          "p95": 4,
+          "worst": 29.200000002980232
+        }
+      },
+      "after": {
+        "samples": 6,
+        "failures": 0,
+        "total": {
+          "p50": 1990.0514999999978,
+          "p95": 2506.4937000000064,
+          "worst": 4693.814100000003
+        },
+        "extraction": {
+          "p50": 0.14179999999760184,
+          "p95": 203.0643999999993,
+          "worst": 745.7802999999985
+        },
+        "generation": {
+          "p50": 1561.75,
+          "p95": 2213.215,
+          "worst": 4247.118999
+        },
+        "ttft": {
+          "p50": 200.88830000000235,
+          "p95": 276.61129999999685,
+          "worst": 425.22960000000603
+        },
+        "verification": {
+          "p50": 0.21880000000237487,
+          "p95": 0.31599999999889405,
+          "worst": 0.3550000000032014
+        },
+        "rendering": {
+          "p50": 0.5,
+          "p95": 0.6999999992549419,
+          "worst": 3
+        }
+      }
+    },
+    "capture": {
+      "before": {
+        "p50": 640.8756000000001,
+        "p95": 648.0587,
+        "worst": 777.4712
+      },
+      "after": {
+        "p50": 788.8678000000004,
+        "p95": 819.2764999999999,
+        "worst": 832.7793999999994
+      }
+    }
+  },
+  "captureStats": {
+    "before": [
+      {
+        "ms": 648.0587,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "ms": 640.8756000000001,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "ms": 624.0948999999998,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "ms": 624.7062000000001,
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "ms": 777.4712,
+        "width": 1920,
+        "height": 1080
+      }
+    ],
+    "after": [
+      {
+        "ms": 788.8678000000004,
+        "width": 2560,
+        "height": 1440,
+        "stages": [
+          {
+            "stage": "monitorSelection",
+            "status": "ok",
+            "ms": 0
+          },
+          {
+            "stage": "capture",
+            "status": "ok",
+            "ms": 655
+          },
+          {
+            "stage": "capturePreprocessing",
+            "status": "ok",
+            "ms": 5
+          }
+        ]
+      },
+      {
+        "ms": 587.4351999999999,
+        "width": 2560,
+        "height": 1440,
+        "stages": [
+          {
+            "stage": "monitorSelection",
+            "status": "ok",
+            "ms": 0
+          },
+          {
+            "stage": "capture",
+            "status": "ok",
+            "ms": 450
+          },
+          {
+            "stage": "capturePreprocessing",
+            "status": "ok",
+            "ms": 4
+          }
+        ]
+      },
+      {
+        "ms": 819.2764999999999,
+        "width": 2560,
+        "height": 1440,
+        "stages": [
+          {
+            "stage": "monitorSelection",
+            "status": "ok",
+            "ms": 0
+          },
+          {
+            "stage": "capture",
+            "status": "ok",
+            "ms": 673
+          },
+          {
+            "stage": "capturePreprocessing",
+            "status": "ok",
+            "ms": 10
+          }
+        ]
+      },
+      {
+        "ms": 832.7793999999994,
+        "width": 2560,
+        "height": 1440,
+        "stages": [
+          {
+            "stage": "monitorSelection",
+            "status": "ok",
+            "ms": 1
+          },
+          {
+            "stage": "capture",
+            "status": "ok",
+            "ms": 685
+          },
+          {
+            "stage": "capturePreprocessing",
+            "status": "ok",
+            "ms": 4
+          }
+        ]
+      },
+      {
+        "ms": 770.9681,
+        "width": 2560,
+        "height": 1440,
+        "stages": [
+          {
+            "stage": "monitorSelection",
+            "status": "ok",
+            "ms": 0
+          },
+          {
+            "stage": "capture",
+            "status": "ok",
+            "ms": 615
+          },
+          {
+            "stage": "capturePreprocessing",
+            "status": "ok",
+            "ms": 11
+          }
+        ]
+      }
+    ]
+  },
+  "records": [
+    {
+      "phase": "before",
+      "fixture": "median",
+      "repeat": 0,
+      "fixtureCaptureMs": 25.348399999998946,
+      "extractionMs": 4813.091899999999,
+      "promptMs": 3.395700000000943,
+      "verificationMs": 0.9261999999980617,
+      "renderingMs": 4,
+      "totalMs": 9056.4411,
+      "text": "For four values, the median is the average of the two middle ones. The two middle values are 4 and 8. So I say (4 + 8) divided by 2, which is 6.",
+      "ttftMs": 3019.1132,
+      "modelRequestMs": 4209.160899999999,
+      "generationMs": 1192.131,
+      "prefillMs": 304.49,
+      "modelLoadMs": 2696.5449,
+      "serverMs": 4199.7113,
+      "tokens": 46,
+      "finishReason": "stop",
+      "criticalFlags": 0
+    },
+    {
+      "phase": "after",
+      "fixture": "median",
+      "repeat": 0,
+      "fixtureCaptureMs": 20.024599999997008,
+      "extractionMs": 745.7802999999985,
+      "promptMs": 0.5036999999974796,
+      "verificationMs": 0.21010000000023865,
+      "renderingMs": 0.5,
+      "totalMs": 1953.4583999999995,
+      "text": "For four values, the median is the average of the two middle ones. The two middle values are 4 and 8. So, I say (4 + 8) divided by 2, which is 6.",
+      "ttftMs": 47.63420000000042,
+      "modelRequestMs": 1185.966199999999,
+      "generationMs": 1138.609,
+      "prefillMs": 35.134,
+      "modelLoadMs": 4.0079,
+      "serverMs": 1184.0836,
+      "tokens": 47,
+      "finishReason": "stop",
+      "criticalFlags": 0,
+      "extractionStages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.31639999999970314,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 744.2322999999997,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 37.49500000049011
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 58.6263000004692
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.8494000000027881,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "phase": "before",
+      "fixture": "code",
+      "repeat": 0,
+      "fixtureCaptureMs": 19.67240000000311,
+      "extractionMs": 4228.006000000001,
+      "promptMs": 13.279500000000553,
+      "verificationMs": 0.9302000000025146,
+      "renderingMs": 29.200000002980232,
+      "totalMs": 10976.4441,
+      "text": "The code contains the following bugs:\n\n1. `const total` is declared but never initialized. A `const` variable must be assigned a value at declaration, and this one is missing an initial value.\n\n2. The `for` loop condition is malformed: `for (let i o; items . length;` — this contains syntax errors: \"o\" instead of \"0\", and \"items . length\" should be \"items.length\".\n\n3. The loop variable `i` is declared with `let`, which is correct, but the loop condition and increment are not properly formed.\n\nCorrected version:\n```javascript\nconst total = 0;\nfor (let i = 0; i < items.length; i++) {\n    total += items[i];\n}\nreturn total;\n```",
+      "ttftMs": 3025.5829999999987,
+      "modelRequestMs": 6684.779600000002,
+      "generationMs": 3659.287,
+      "prefillMs": 344.529,
+      "modelLoadMs": 2670.0677,
+      "serverMs": 6681.7181,
+      "tokens": 160,
+      "finishReason": "stop",
+      "criticalFlags": 0
+    },
+    {
+      "phase": "after",
+      "fixture": "code",
+      "repeat": 0,
+      "fixtureCaptureMs": 20.644400000001042,
+      "extractionMs": 203.0643999999993,
+      "promptMs": 0.4191999999966356,
+      "verificationMs": 0.3550000000032014,
+      "renderingMs": 3,
+      "totalMs": 1990.0514999999978,
+      "text": "The bug is in the for loop condition: `i <= items.length` should be `i < items.length`. Using `<=` causes the loop to iterate one past the end of the array, resulting in `items[i]` accessing an undefined index and causing a runtime error. The corrected loop condition ensures iteration over valid indices only.",
+      "ttftMs": 200.88830000000235,
+      "modelRequestMs": 1762.269900000003,
+      "generationMs": 1561.75,
+      "prefillMs": 168.089,
+      "modelLoadMs": 4.654,
+      "serverMs": 1759.7615,
+      "tokens": 69,
+      "finishReason": "stop",
+      "criticalFlags": 0,
+      "extractionStages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.16239999999743304,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 202.47459999999774,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 40.86440000173752
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 161.02160000082222
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.34879999999975553,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "phase": "before",
+      "fixture": "rust",
+      "repeat": 0,
+      "fixtureCaptureMs": 19.496299999998882,
+      "extractionMs": 4162.951500000003,
+      "promptMs": 0.45650000000023283,
+      "verificationMs": 0.6278999999994994,
+      "renderingMs": 0.8000000007450581,
+      "totalMs": 9662.609100000001,
+      "text": "`Rc` uses non-atomic reference counting for single-threaded shared ownership, while `Arc` uses atomic reference counting for shared ownership across threads, requiring the type to implement `Send` and `Sync`. Both allow multiple owners of the same value, but only `Arc` is safe for use across threads. Mutable shared state still requires synchronization (e.g., `Mutex`) regardless of whether using `Rc` or `Arc`.",
+      "ttftMs": 3056.5954000000056,
+      "modelRequestMs": 5477.909100000004,
+      "generationMs": 2421.514,
+      "prefillMs": 357.05,
+      "modelLoadMs": 2688.7434,
+      "serverMs": 5475.0993,
+      "tokens": 90,
+      "finishReason": "stop",
+      "criticalFlags": 0
+    },
+    {
+      "phase": "after",
+      "fixture": "rust",
+      "repeat": 0,
+      "fixtureCaptureMs": 20.17859999999928,
+      "extractionMs": 97.1536000000051,
+      "promptMs": 0.25899999999819556,
+      "verificationMs": 0.31599999999889405,
+      "renderingMs": 0.3999999985098839,
+      "totalMs": 2134.4452999999994,
+      "text": "Rc (Reference Count) uses non-atomic reference counting for single-threaded shared ownership, while Arc (Atomic Reference Count) uses atomic reference counting for shared ownership across threads, requiring the type to implement Send and Sync. Arc is thread-safe, whereas Rc is not. Mutable shared state still requires synchronization (e.g., Mutex) regardless of the container.",
+      "ttftMs": 129.69550000000163,
+      "modelRequestMs": 2015.765099999997,
+      "generationMs": 1886.356,
+      "prefillMs": 115.853,
+      "modelLoadMs": 3.5,
+      "serverMs": 2013.3146,
+      "tokens": 73,
+      "finishReason": "stop",
+      "criticalFlags": 0,
+      "extractionStages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.06609999999636784,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 96.9716000000044,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 42.085599998245016
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 54.318300000886666
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.046300000001792796,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "phase": "after",
+      "fixture": "median",
+      "repeat": 1,
+      "fixtureCaptureMs": 20.098400000002584,
+      "extractionMs": 0.14179999999760184,
+      "promptMs": 0.3033999999970547,
+      "verificationMs": 0.17149999999674037,
+      "renderingMs": 0.5,
+      "totalMs": 459.86019999999553,
+      "text": "The median is 4.",
+      "ttftMs": 276.61129999999685,
+      "modelRequestMs": 438.12949999999546,
+      "generationMs": 161.649,
+      "prefillMs": 252.664,
+      "modelLoadMs": 3.5091,
+      "serverMs": 437.4778,
+      "tokens": 7,
+      "finishReason": "stop",
+      "criticalFlags": 0,
+      "extractionStages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.08249999999679858,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "phase": "before",
+      "fixture": "median",
+      "repeat": 1,
+      "fixtureCaptureMs": 22.31029999999737,
+      "extractionMs": 4403.2955,
+      "promptMs": 0.3286000000007334,
+      "verificationMs": 0.18289999999979045,
+      "renderingMs": 0.19999999925494194,
+      "totalMs": 8594.574499999995,
+      "text": "For four values, the median is the average of the two middle ones. The two middle values are 4 and 8. So I say (4 + 8) divided by 2, which is 6.",
+      "ttftMs": 2983.502299999993,
+      "modelRequestMs": 4167.822899999999,
+      "generationMs": 1184.483,
+      "prefillMs": 286.676,
+      "modelLoadMs": 2687.2625,
+      "serverMs": 4166.0488,
+      "tokens": 46,
+      "finishReason": "stop",
+      "criticalFlags": 0
+    },
+    {
+      "phase": "after",
+      "fixture": "code",
+      "repeat": 1,
+      "fixtureCaptureMs": 19.556299999996554,
+      "extractionMs": 0.13390000000072177,
+      "promptMs": 0.5654000000067754,
+      "verificationMs": 0.31450000000040745,
+      "renderingMs": 0.6999999992549419,
+      "totalMs": 4693.814100000003,
+      "text": "The bug is in the for loop condition: `i <= items.length`. This causes an out-of-bounds access when `i` equals `items.length`, as the loop iterates over `items[i]`, which does not exist for indices beyond the array length. The correct condition should be `i < items.length`. Additionally, the initial `const total = 0;` cannot be reassigned in the loop because `const` declarations are non-reassignable, so `total +=` would throw a TypeError. The variable should be declared with `let` instead. Corrected code:\n\n```javascript\nlet total = 0;\nfor (let i = 0; i < items.length; i++) {\n  total += items[i];\n}\nreturn total;\n```",
+      "ttftMs": 425.22960000000603,
+      "modelRequestMs": 4672.1398000000045,
+      "generationMs": 4247.118999,
+      "prefillMs": 400.503,
+      "modelLoadMs": 2.9989,
+      "serverMs": 4669.7896,
+      "tokens": 157,
+      "finishReason": "stop",
+      "criticalFlags": 0,
+      "extractionStages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.08090000000083819,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "phase": "before",
+      "fixture": "code",
+      "repeat": 1,
+      "fixtureCaptureMs": 20.31710000000021,
+      "extractionMs": 4168.754199999996,
+      "promptMs": 0.7494999999980791,
+      "verificationMs": 0.7193000000115717,
+      "renderingMs": 0.5,
+      "totalMs": 11345.8001,
+      "text": "The code contains the following bugs:\n\n1. `const total` is declared but never initialized. A `const` variable must be assigned a value at declaration, and this one is missing an initial value.\n\n2. The `for` loop condition is malformed: `for (let i o; items . length;` — this contains syntax errors: \"o\" instead of \"0\", and \"items . length\" should be \"items.length\".\n\n3. The loop variable `i` is declared with `let`, which is correct, but the loop condition and increment are not properly formed.\n\nCorrected version:\n```javascript\nconst total = 0;\nfor (let i = 0; i < items.length; i++) {\n    total += items[i];\n}\nreturn total;\n```",
+      "ttftMs": 3070.8134000000064,
+      "modelRequestMs": 7154.367699999995,
+      "generationMs": 4084.118,
+      "prefillMs": 400.439,
+      "modelLoadMs": 2659.3487,
+      "serverMs": 7151.7175,
+      "tokens": 160,
+      "finishReason": "stop",
+      "criticalFlags": 0
+    },
+    {
+      "phase": "after",
+      "fixture": "rust",
+      "repeat": 1,
+      "fixtureCaptureMs": 19.452100000009523,
+      "extractionMs": 0.12540000000444707,
+      "promptMs": 0.23099999999976717,
+      "verificationMs": 0.21880000000237487,
+      "renderingMs": 0.5,
+      "totalMs": 2506.4937000000064,
+      "text": "Rc (Reference Count) uses non-atomic reference counting for single-threaded shared ownership, while Arc (Atomic Reference Count) uses atomic reference counting for shared ownership across threads, requiring the type to implement Send and Sync. Rc is thread-unsafe, Arc is thread-safe. Both allow shared ownership, but only Arc supports concurrent access across threads. Mutable shared state still requires synchronization (e.g., Mutex) regardless of the container.",
+      "ttftMs": 272.60169999999925,
+      "modelRequestMs": 2485.583400000003,
+      "generationMs": 2213.215,
+      "prefillMs": 243.629,
+      "modelLoadMs": 3.5007,
+      "serverMs": 2483.7533,
+      "tokens": 88,
+      "finishReason": "stop",
+      "criticalFlags": 0,
+      "extractionStages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.059999999997671694,
+          "status": "ok"
+        }
+      ]
+    },
+    {
+      "phase": "before",
+      "fixture": "rust",
+      "repeat": 1,
+      "fixtureCaptureMs": 20.881099999998696,
+      "extractionMs": 4249.531000000003,
+      "promptMs": 0.32480000000214204,
+      "verificationMs": 0.474900000001071,
+      "renderingMs": 0.30000000074505806,
+      "totalMs": 9881.975499999986,
+      "text": "`Rc` uses non-atomic reference counting for single-threaded shared ownership, while `Arc` uses atomic reference counting for shared ownership across threads, requiring the type to implement `Send` and `Sync`. Both allow multiple owners of the same value, but only `Arc` is safe for use across threads. Mutable shared state still requires synchronization (e.g., `Mutex`) regardless of whether using `Rc` or `Arc`.",
+      "ttftMs": 3059.725900000005,
+      "modelRequestMs": 5610.028999999995,
+      "generationMs": 2550.349,
+      "prefillMs": 365.899,
+      "modelLoadMs": 2684.4232,
+      "serverMs": 5607.5528,
+      "tokens": 90,
+      "finishReason": "stop",
+      "criticalFlags": 0
+    }
+  ]
+}

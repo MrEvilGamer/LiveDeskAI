@@ -1,0 +1,14 @@
+node_modules/
+smoke-*.png
+__pycache__/
+*.pyc
+.vite/
+
+.venv/
+dist/
+dist-continuity/
+dist-updated/
+*.log
+__pycache__/
+*.exe
+benchmarks/**/*.exe

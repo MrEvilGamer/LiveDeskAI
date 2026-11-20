@@ -1,0 +1,5 @@
+{
+  "promptSha256": "f34e85626a97f3e4f6c3e268c31dd47dd99dcae714cb5ff0cc88036c57532ece",
+  "appArchiveSha256": "c4e623c0cff80c2fbbd5a51e7de175f6469e3f014daac56b2234963347b4b8a8",
+  "note": "Pre-upgrade answer generation source and packaged app; personal configuration and keys are excluded."
+}

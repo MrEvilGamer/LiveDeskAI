@@ -1,0 +1,68 @@
+{
+  "name": "livedesk-ai",
+  "productName": "LiveDesk AI",
+  "version": "1.0.0",
+  "description": "Real-time meeting copilot \u00e2\u20ac\u201d listens to your PC audio, answers live, invisible to screen share.",
+  "main": "main.js",
+  "license": "MIT",
+  "author": "LiveDesk AI",
+  "scripts": {
+    "start": "electron .",
+    "smoke": "electron . --smoke",
+    "dist": "electron-builder --win portable",
+    "predist": "node scripts/write-runtime-root.js",
+    "postinstall": "node scripts/gen-icon.js",
+    "test": "node scripts/test-vad.js && node scripts/test-stream.js && node scripts/test-humanize.js && node scripts/test-sse.js && node scripts/test-reliability.js && node scripts/test-screen-continuity.js && node scripts/test-quality.js && node scripts/test-answer-recovery.js && node scripts/test-audio-quality.js && node scripts/test-conversation-memory.js && node scripts/test-echo-recovery.js && node scripts/test-greeting-replies.js && node scripts/test-screen-task-details.js && node scripts/test-manual-full-task.js && node scripts/test-technical-coach.js && node scripts/test-screen-repair.js && node scripts/test-screen-request-races.js && node scripts/test-screen-prompt-equivalence.js",
+    "test:stt": "python scripts/test_stt.py",
+    "test:live": "node scripts/test-live.js",
+    "test:transcript": "electron scripts/test-transcript-answer.js",
+    "test:screen-timeout": "node scripts/test-screen-timeout-recovery.js",
+    "test:screen-intent": "node scripts/test-screen-question-intent.js && node scripts/test-no-screen-task-ui.js",
+    "test:technical": "node scripts/test-technical-coach.js && node scripts/test-technical-oracles.js",
+    "test:practice": "electron scripts/test-practice-ui.js",
+    "coach:build-data": "python scripts/build-coach-data.py",
+    "coach:verify-sources": "python scripts/verify-coach-sources.py",
+    "benchmark:baseline": "node scripts/run-technical-benchmark.js --phase=baseline",
+    "benchmark:upgraded": "node scripts/run-technical-benchmark.js --phase=upgraded",
+    "benchmark:review": "node scripts/review-technical-benchmark.js",
+    "benchmark:report": "node scripts/summarize-technical-benchmark.js",
+    "test:screen-ocr": "electron scripts/test-screen-ocr-fixtures.js",
+    "benchmark:screen": "electron scripts/benchmark-screen-repair.js",
+    "ocr:install": ".venv\\Scripts\\python.exe -m pip install -r requirements-ocr.txt"
+  },
+  "devDependencies": {
+    "electron": "^38.2.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.livedesk.ai",
+    "productName": "LiveDesk AI",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "scripts/screen-ocr.ps1",
+      "src/**/*",
+      "assets/**/*",
+      "screen-pipeline.js",
+      "local-ocr.js",
+      "scripts/local-ocr-worker.py"
+    ],
+    "win": {
+      "icon": "assets/icon.png",
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "portable": {
+      "artifactName": "LiveDeskAI.exe"
+    }
+  }
+}

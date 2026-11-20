@@ -1,0 +1,658 @@
+{
+  "rust-book": {
+    "url": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+    "resolvedUrl": "https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html",
+    "status": 200,
+    "characters": 662,
+    "sha256": "bf5b83b52f9cddf5aa3041dfb5c3173e4de22a6e2e018c5bdc9ef45c449b47de",
+    "retrievedAt": "2026-10-16T17:44:44.550569+00:00"
+  },
+  "rust-lifetimes": {
+    "url": "https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html",
+    "resolvedUrl": "https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html",
+    "status": 200,
+    "characters": 34033,
+    "sha256": "ea4a843bd3a74229960b490a7af4ecee1d86740ecec5643dcf36ee4fa6a5d40a",
+    "retrievedAt": "2026-10-16T17:44:44.575608+00:00"
+  },
+  "rust-smart": {
+    "url": "https://doc.rust-lang.org/book/ch15-00-smart-pointers.html",
+    "resolvedUrl": "https://doc.rust-lang.org/book/ch15-00-smart-pointers.html",
+    "status": 200,
+    "characters": 2876,
+    "sha256": "dca462ae04ed7307fb123378924f21e2c69e8b1659566fb88f82187a6b4830a8",
+    "retrievedAt": "2026-10-16T17:44:44.550070+00:00"
+  },
+  "rust-send": {
+    "url": "https://doc.rust-lang.org/nomicon/send-and-sync.html",
+    "resolvedUrl": "https://doc.rust-lang.org/nomicon/send-and-sync.html",
+    "status": 200,
+    "characters": 10359,
+    "sha256": "e801e8de702a62868b787e72e030e2dfa636c6550a845d9c5e61227de8ca4d37",
+    "retrievedAt": "2026-10-16T17:44:44.574098+00:00"
+  },
+  "rust-errors": {
+    "url": "https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html",
+    "resolvedUrl": "https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html",
+    "status": 200,
+    "characters": 26146,
+    "sha256": "3ee5ea6a5f947cf8c8da81c54a9945db85cc0f37f6fd97f274b0fcbbbfb946e2",
+    "retrievedAt": "2026-10-16T17:44:44.588626+00:00"
+  },
+  "rust-async": {
+    "url": "https://rust-lang.github.io/async-book/03_async_await/01_chapter.html",
+    "resolvedUrl": "https://rust-lang.github.io/async-book/03_async_await/01_chapter.html",
+    "status": 200,
+    "characters": 4950,
+    "sha256": "b0c95acacac2b13241788b684f40b23fffabc5f318a46ac0d4bb8ba2d2dc2e97",
+    "retrievedAt": "2026-10-16T17:44:44.565090+00:00"
+  },
+  "node-loop": {
+    "url": "https://nodejs.org/en/learn/asynchronous-work/event-loop-timers-and-nexttick",
+    "resolvedUrl": "https://nodejs.org/learn/asynchronous-work/event-loop-timers-and-nexttick",
+    "status": 200,
+    "characters": 25822,
+    "sha256": "8ec549ddd474c4032ed59468eff192f8387e3692953e8fced01f2768b6846630",
+    "retrievedAt": "2026-10-16T17:44:44.866133+00:00"
+  },
+  "node-process": {
+    "url": "https://nodejs.org/api/process.html",
+    "resolvedUrl": "https://nodejs.org/api/process.html",
+    "status": 200,
+    "characters": 131379,
+    "sha256": "53b9f03116c3f551acd93a6dbcf1ff86d53c427016d1760e3d589c742d550a57",
+    "retrievedAt": "2026-10-16T17:44:44.706332+00:00"
+  },
+  "node-stream": {
+    "url": "https://nodejs.org/api/stream.html",
+    "resolvedUrl": "https://nodejs.org/api/stream.html",
+    "status": 200,
+    "characters": 150164,
+    "sha256": "c07a023b540ad03dc503f9d0862ca94acbc845839217845aaa6bf18090929ca4",
+    "retrievedAt": "2026-10-16T17:44:44.845100+00:00"
+  },
+  "node-worker": {
+    "url": "https://nodejs.org/api/worker_threads.html",
+    "resolvedUrl": "https://nodejs.org/api/worker_threads.html",
+    "status": 200,
+    "characters": 66026,
+    "sha256": "ed0bfde69512a9bb5b59c8362a598febf85bc354be120aed5c37006470f073a8",
+    "retrievedAt": "2026-10-16T17:44:44.752939+00:00"
+  },
+  "node-errors": {
+    "url": "https://nodejs.org/api/errors.html",
+    "resolvedUrl": "https://nodejs.org/api/errors.html",
+    "status": 200,
+    "characters": 121826,
+    "sha256": "a6707837ba83be976de1ab1cd29cc3d545d24abc838722ba9fd16381c1511a73",
+    "retrievedAt": "2026-10-16T17:44:44.930247+00:00"
+  },
+  "js-mdn": {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const",
+    "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const",
+    "status": 200,
+    "characters": 19786,
+    "sha256": "c49417a637a0fd22e9a22ab3842b71632884e889ff7547845a73145ad736160f",
+    "retrievedAt": "2026-10-16T17:44:44.930747+00:00"
+  },
+  "js-promises": {
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all",
+    "resolvedUrl": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all",
+    "status": 200,
+    "characters": 14474,
+    "sha256": "fca83fcd1daf5d687be48dca56eeef75c7e8c91f4a130657a6ec11d6a22de947",
+    "retrievedAt": "2026-10-16T17:44:44.944277+00:00"
+  },
+  "oauth-bcp": {
+    "url": "https://www.rfc-editor.org/rfc/rfc9700.html",
+    "resolvedUrl": "https://www.rfc-editor.org/rfc/rfc9700.html",
+    "status": 200,
+    "characters": 115566,
+    "sha256": "c00e2234fcd79581bc29669c60d693afaa42f67d9205bddee848f757ae975419",
+    "retrievedAt": "2026-10-16T17:44:45.276779+00:00"
+  },
+  "pkce": {
+    "url": "https://www.rfc-editor.org/rfc/rfc7636.html",
+    "resolvedUrl": "https://www.rfc-editor.org/rfc/rfc7636.html",
+    "status": 200,
+    "characters": 38502,
+    "sha256": "1dd39bd17081e0ed18c2cf304b87c79061c51e505d2ff5e12ffbd0d182fe5b20",
+    "retrievedAt": "2026-10-16T17:44:45.296822+00:00"
+  },
+  "jwt": {
+    "url": "https://www.rfc-editor.org/rfc/rfc8725.html",
+    "resolvedUrl": "https://www.rfc-editor.org/rfc/rfc8725.html",
+    "status": 200,
+    "characters": 28807,
+    "sha256": "7f93df8a106c14e2c9394bd3fc12a488266477c89a1fe2f9182cf0bdb02d7ce0",
+    "retrievedAt": "2026-10-16T17:44:45.288799+00:00"
+  },
+  "owasp-session": {
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+    "resolvedUrl": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+    "status": 200,
+    "characters": 58668,
+    "sha256": "9a41b1f652967db72891f700de671e120d60c17add096a0bd5b8894ecced643f",
+    "retrievedAt": "2026-10-16T17:44:45.040990+00:00"
+  },
+  "owasp-csrf": {
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html",
+    "resolvedUrl": "https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html",
+    "status": 200,
+    "characters": 58901,
+    "sha256": "ed0f6af65d7c9d9ce0092a6d4185a056826513fb074e861f8d874324c3610915",
+    "retrievedAt": "2026-10-16T17:44:45.115577+00:00"
+  },
+  "owasp-xss": {
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+    "resolvedUrl": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+    "status": 200,
+    "characters": 34175,
+    "sha256": "cd44319ce21cf19bfb9823e52076f2705589deedee20818f6d1d576886ec6695",
+    "retrievedAt": "2026-10-16T17:44:45.216703+00:00"
+  },
+  "owasp-authz": {
+    "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+    "resolvedUrl": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+    "status": 200,
+    "characters": 32400,
+    "sha256": "ef90d31f45bc6018ed7d859d341c1339499f036128c85f0fd5eccd08850537b9",
+    "retrievedAt": "2026-10-16T17:44:45.294817+00:00"
+  },
+  "webhooks": {
+    "url": "https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries",
+    "resolvedUrl": "https://docs.github.com/en/webhooks/using-webhooks/validating-webhook-deliveries",
+    "status": 200,
+    "characters": 9960,
+    "sha256": "b997b7055c97c08164716ab69bb7a3d4bbd1ecb77f765f8069dfa39e7863cd2a",
+    "retrievedAt": "2026-10-16T17:44:45.310876+00:00"
+  },
+  "postgres": {
+    "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+    "resolvedUrl": "https://www.postgresql.org/docs/current/transaction-iso.html",
+    "status": 200,
+    "characters": 24457,
+    "sha256": "0b5013fde5e842c82664f2d9fe599f1c8ef7756e8c3ecc254b589e3be9e0d356",
+    "retrievedAt": "2026-10-16T17:44:46.564199+00:00"
+  },
+  "postgres-rls": {
+    "url": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+    "resolvedUrl": "https://www.postgresql.org/docs/current/ddl-rowsecurity.html",
+    "status": 200,
+    "characters": 16691,
+    "sha256": "d7a9171908b69074391d87dc376db9b28188ec0840e8f083cd44ae384f030a1f",
+    "retrievedAt": "2026-10-16T17:44:46.366205+00:00"
+  },
+  "postgres-query": {
+    "url": "https://www.postgresql.org/docs/current/queries.html",
+    "resolvedUrl": "https://www.postgresql.org/docs/current/queries.html",
+    "status": 200,
+    "characters": 1816,
+    "sha256": "1e0879d9ebaad2a019ebccabc217ebaf075ead98d98bff9cbe8ac3ea3b32f685",
+    "retrievedAt": "2026-10-16T17:44:46.373883+00:00"
+  },
+  "postgres-index": {
+    "url": "https://www.postgresql.org/docs/current/indexes.html",
+    "resolvedUrl": "https://www.postgresql.org/docs/current/indexes.html",
+    "status": 200,
+    "characters": 1742,
+    "sha256": "133053a3a56f926d9868a9fc508082634be3f8c8c88b60d84508c332cf6fb27e",
+    "retrievedAt": "2026-10-16T17:44:46.344163+00:00"
+  },
+  "kafka": {
+    "url": "https://kafka.apache.org/41/design/design/",
+    "resolvedUrl": "https://kafka.apache.org/41/design/design/",
+    "status": 200,
+    "characters": 75797,
+    "sha256": "6039a9926e28c03e10ae4a6307ddc382f5631d17f1f65735d0d165f57022337b",
+    "retrievedAt": "2026-10-16T17:44:46.366205+00:00"
+  },
+  "aws-retry": {
+    "url": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/",
+    "resolvedUrl": "https://builder.aws.com/content/3EumjoZascWd1oZiEgL8ORlv3qE/timeouts-retries-and-backoff-with-jitter",
+    "status": 200,
+    "characters": 15077,
+    "sha256": "7344a33f9484093771dcc6274f90c04e3a189c7f9d748b87be5234df94f3506d",
+    "retrievedAt": "2026-10-16T17:44:48.309336+00:00"
+  },
+  "aws-idempotency": {
+    "url": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+    "resolvedUrl": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+    "status": 200,
+    "characters": 37232,
+    "sha256": "70cd24480f089d56169c09e46ef630e3b37f493ae029cb30e1b69f69a3a5a56a",
+    "retrievedAt": "2026-10-16T17:44:47.248569+00:00"
+  },
+  "github-workflow": {
+    "url": "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax",
+    "resolvedUrl": "https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax",
+    "status": 200,
+    "characters": 152151,
+    "sha256": "75ceb065df39204b3e29d842eababa0d9e7bd878c29d1654aaf39e4377e78a7e",
+    "retrievedAt": "2026-10-16T17:44:46.520148+00:00"
+  },
+  "github-security": {
+    "url": "https://docs.github.com/en/actions/reference/security/secure-use",
+    "resolvedUrl": "https://docs.github.com/en/actions/reference/security/secure-use",
+    "status": 200,
+    "characters": 36378,
+    "sha256": "e0ea48def3b8cf5ea7eb81d3b50be67dba3af4280dce9552fbe45674572bd6c3",
+    "retrievedAt": "2026-10-16T17:44:46.560699+00:00"
+  },
+  "git-rebase": {
+    "url": "https://git-scm.com/docs/git-rebase",
+    "resolvedUrl": "https://git-scm.com/docs/git-rebase",
+    "status": 200,
+    "characters": 58145,
+    "sha256": "79fad1f56094e21159d590ad66a9e04c083a2c78d0df624bb7e32767afd4cc73",
+    "retrievedAt": "2026-10-16T17:44:46.636377+00:00"
+  },
+  "git-bisect": {
+    "url": "https://git-scm.com/docs/git-bisect",
+    "resolvedUrl": "https://git-scm.com/docs/git-bisect",
+    "status": 200,
+    "characters": 18759,
+    "sha256": "fc479a5496c3d54bc805a5a7ad6aaad58da5137354410342beb0b8f725ebc29d",
+    "retrievedAt": "2026-10-16T17:44:46.635875+00:00"
+  },
+  "bash": {
+    "url": "https://www.gnu.org/software/bash/manual/bash.html",
+    "resolvedUrl": "https://www.gnu.org/software/bash/manual/bash.html",
+    "status": 200,
+    "characters": 522197,
+    "sha256": "78d0eefbe60cfe7345ffdafede7294f055b04e53bd520360ff699b24f81e2b4b",
+    "retrievedAt": "2026-10-16T17:44:49.097792+00:00"
+  },
+  "hypothesis": {
+    "url": "https://hypothesis.readthedocs.io/en/latest/stateful.html",
+    "resolvedUrl": "https://hypothesis.readthedocs.io/en/latest/stateful.html",
+    "status": 200,
+    "characters": 13001,
+    "sha256": "936a7b82f4263254d3c02e07529d291df01f9c6dd5453db83d83c7b7a0cb4053",
+    "retrievedAt": "2026-10-16T17:44:46.689500+00:00"
+  },
+  "node-test": {
+    "url": "https://nodejs.org/api/test.html",
+    "resolvedUrl": "https://nodejs.org/api/test.html",
+    "status": 200,
+    "characters": 169140,
+    "sha256": "e26c5746004f18a50aff2a977ae78c90bb15336affdf6cc84a05ed27ef2ccf5d",
+    "retrievedAt": "2026-10-16T17:44:46.877984+00:00"
+  },
+  "otel": {
+    "url": "https://opentelemetry.io/docs/concepts/signals/",
+    "resolvedUrl": "https://opentelemetry.io/docs/concepts/signals/",
+    "status": 200,
+    "characters": 12037,
+    "sha256": "3b723af89e013562c8fc05524624633b480d31bdba4442c5a0d7b1fef4c5c016",
+    "retrievedAt": "2026-10-16T17:44:47.102822+00:00"
+  },
+  "algorithms": {
+    "url": "https://opendatastructures.org/ods-python/",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/",
+    "status": 200,
+    "characters": 549,
+    "sha256": "695d046e0d6b23011fe9ed5513b8a20f89adb19e427a3e69534909a67687bce3",
+    "retrievedAt": "2026-10-16T17:44:47.835980+00:00"
+  },
+  "outbox": {
+    "url": "https://microservices.io/patterns/data/transactional-outbox.html",
+    "resolvedUrl": "https://microservices.io/patterns/data/transactional-outbox.html",
+    "status": 200,
+    "characters": 8256,
+    "sha256": "7b9d9b224d9b985bf03d581dcdef5c94a21f49a93f3ac1e74c6bc2104a48b3eb",
+    "retrievedAt": "2026-10-16T17:44:47.291119+00:00"
+  },
+  "rust-ownership": {
+    "url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+    "resolvedUrl": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+    "status": 200,
+    "characters": 25524,
+    "sha256": "e3fc7f4e1db60f35be5bf71f915af51863b2ad0ccc5dd0e78debf4ce57e966a5",
+    "retrievedAt": "2026-10-16T17:44:47.306653+00:00"
+  },
+  "rust-borrow": {
+    "url": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+    "resolvedUrl": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+    "status": 200,
+    "characters": 13067,
+    "sha256": "379c38691d0eec3fed415151166f37705084acbac8ed98b67adf55990ab43552",
+    "retrievedAt": "2026-10-16T17:44:47.333181+00:00"
+  },
+  "rust-strings": {
+    "url": "https://doc.rust-lang.org/book/ch04-03-slices.html",
+    "resolvedUrl": "https://doc.rust-lang.org/book/ch04-03-slices.html",
+    "status": 200,
+    "characters": 15171,
+    "sha256": "20faee1339c2cc9453c79e8002a9266d472124fc3b3f266f8bddb0254621aff0",
+    "retrievedAt": "2026-10-16T17:44:47.369242+00:00"
+  },
+  "rust-box": {
+    "url": "https://doc.rust-lang.org/book/ch15-01-box.html",
+    "resolvedUrl": "https://doc.rust-lang.org/book/ch15-01-box.html",
+    "status": 200,
+    "characters": 11880,
+    "sha256": "8cb41d54d92d56e0e6eccfea917f52d3f2f46735eb4edf98fae25715e997c742",
+    "retrievedAt": "2026-10-16T17:44:47.398576+00:00"
+  },
+  "rust-rc": {
+    "url": "https://doc.rust-lang.org/book/ch15-04-rc.html",
+    "resolvedUrl": "https://doc.rust-lang.org/book/ch15-04-rc.html",
+    "status": 200,
+    "characters": 9479,
+    "sha256": "3e93252383f96cc2dc0334b2aa82b7aa3e827035ab52cd270616a68060d4b6eb",
+    "retrievedAt": "2026-10-16T17:44:47.427073+00:00"
+  },
+  "rust-refcell": {
+    "url": "https://doc.rust-lang.org/book/ch15-05-interior-mutability.html",
+    "resolvedUrl": "https://doc.rust-lang.org/book/ch15-05-interior-mutability.html",
+    "status": 200,
+    "characters": 24782,
+    "sha256": "78fd95fcabc8031e870dbf5908df6c39da4e7c1b50fa2bba570fff49c4ec0197",
+    "retrievedAt": "2026-10-16T17:44:47.445091+00:00"
+  },
+  "rust-mutex": {
+    "url": "https://doc.rust-lang.org/book/ch16-03-shared-state.html",
+    "resolvedUrl": "https://doc.rust-lang.org/book/ch16-03-shared-state.html",
+    "status": 200,
+    "characters": 14748,
+    "sha256": "4513cce93535d39ba09caaf9d5a35dda5a59120244b0f21371687e73f20415d5",
+    "retrievedAt": "2026-10-16T17:44:47.476128+00:00"
+  },
+  "postgres-index-types": {
+    "url": "https://www.postgresql.org/docs/current/indexes-types.html",
+    "resolvedUrl": "https://www.postgresql.org/docs/current/indexes-types.html",
+    "status": 200,
+    "characters": 7095,
+    "sha256": "109cedfc535eeed9d27fb791f02bb3bf9c851fc0cd92ba36cf7691fb9050a9d7",
+    "retrievedAt": "2026-10-16T17:44:48.513768+00:00"
+  },
+  "postgres-joins": {
+    "url": "https://www.postgresql.org/docs/current/queries-table-expressions.html",
+    "resolvedUrl": "https://www.postgresql.org/docs/current/queries-table-expressions.html",
+    "status": 200,
+    "characters": 33811,
+    "sha256": "99a9b4a1bfe425c7f2ebd3685c6c50f1bdfc8ea546c49e355b8ed78e1921535d",
+    "retrievedAt": "2026-10-16T17:44:49.133905+00:00"
+  },
+  "postgres-window": {
+    "url": "https://www.postgresql.org/docs/current/tutorial-window.html",
+    "resolvedUrl": "https://www.postgresql.org/docs/current/tutorial-window.html",
+    "status": 200,
+    "characters": 8369,
+    "sha256": "b31fa5d569a90b52760d328e9a424c4a87cb4e58e823e8ffaf5a8435d4957820",
+    "retrievedAt": "2026-10-16T17:44:49.363280+00:00"
+  },
+  "postgres-limit": {
+    "url": "https://www.postgresql.org/docs/current/queries-limit.html",
+    "resolvedUrl": "https://www.postgresql.org/docs/current/queries-limit.html",
+    "status": 200,
+    "characters": 2801,
+    "sha256": "4fee866b08a21b0120711b4c68056839861c4e5ea1a1556bdb44057512207562",
+    "retrievedAt": "2026-10-16T17:44:49.576660+00:00"
+  },
+  "sre-testing": {
+    "url": "https://sre.google/sre-book/testing-reliability/",
+    "resolvedUrl": "https://sre.google/sre-book/testing-reliability/",
+    "status": 200,
+    "characters": 55351,
+    "sha256": "090d12e171de30b49c4228c54314af1f95e021c00270adcff0e5d5609c8e4c2e",
+    "retrievedAt": "2026-10-16T17:44:49.364290+00:00"
+  },
+  "sre-monitor": {
+    "url": "https://sre.google/sre-book/monitoring-distributed-systems/",
+    "resolvedUrl": "https://sre.google/sre-book/monitoring-distributed-systems/",
+    "status": 200,
+    "characters": 30367,
+    "sha256": "3117d94aca6d7422db18b210a4142718388523a4ea2082df539ffe9a8c4c2a75",
+    "retrievedAt": "2026-10-16T17:44:49.352772+00:00"
+  },
+  "algorithms-0": {
+    "url": "https://opendatastructures.org/ods-python/1_Introduction.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/1_Introduction.html",
+    "status": 200,
+    "characters": 2466,
+    "sha256": "e36150b29fb1feed29764e17b68e29b966439225619fda7038c181bec2eab557",
+    "retrievedAt": "2026-10-16T17:44:50.077162+00:00"
+  },
+  "algorithms-1": {
+    "url": "https://opendatastructures.org/ods-python/2_Array_Based_Lists.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/2_Array_Based_Lists.html",
+    "status": 200,
+    "characters": 2442,
+    "sha256": "728663c29edd0a28e024a1dc3f0a7fb618b95ec7c33c8df346c87570b37f09ab",
+    "retrievedAt": "2026-10-16T17:44:50.328281+00:00"
+  },
+  "algorithms-2": {
+    "url": "https://opendatastructures.org/ods-python/3_Linked_Lists.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/3_Linked_Lists.html",
+    "status": 200,
+    "characters": 1480,
+    "sha256": "0a70954f68eeb002c893befdfdd914b16f696f780b7f6211e51c5c3799882f16",
+    "retrievedAt": "2026-10-16T17:44:50.061128+00:00"
+  },
+  "algorithms-3": {
+    "url": "https://opendatastructures.org/ods-python/5_Hash_Tables.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/5_Hash_Tables.html",
+    "status": 200,
+    "characters": 1131,
+    "sha256": "5d6a2e37d63514201a6feff6f5816a46cbad8705f65acc9bf795e28abaec0649",
+    "retrievedAt": "2026-10-16T17:44:50.307762+00:00"
+  },
+  "algorithms-4": {
+    "url": "https://opendatastructures.org/ods-python/10_Heaps.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/10_Heaps.html",
+    "status": 200,
+    "characters": 991,
+    "sha256": "f94ffe46c9d5c8f7407b8105a710b41fc97ce30a40885f6ea151900df55efabc",
+    "retrievedAt": "2026-10-16T17:44:50.779848+00:00"
+  },
+  "algorithms-5": {
+    "url": "https://opendatastructures.org/ods-python/12_Graphs.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/12_Graphs.html",
+    "status": 200,
+    "characters": 3363,
+    "sha256": "c9a4e623e7fac5d0712a94367a49ec557a5f97fb10e17d51571e2f5986718460",
+    "retrievedAt": "2026-10-16T17:44:51.031750+00:00"
+  },
+  "node-child": {
+    "url": "https://nodejs.org/api/child_process.html",
+    "resolvedUrl": "https://nodejs.org/api/child_process.html",
+    "status": 200,
+    "characters": 83634,
+    "sha256": "52e6a62750bbe0e642d72986435550f2236361a6e5a7dacb7711f3137b3ab117",
+    "retrievedAt": "2026-10-16T17:44:50.405384+00:00"
+  },
+  "postgres-null": {
+    "url": "https://www.postgresql.org/docs/current/functions-comparisons.html",
+    "resolvedUrl": "https://www.postgresql.org/docs/current/functions-comparisons.html",
+    "status": 200,
+    "characters": 9093,
+    "sha256": "ba0da3e468eb3dc82543116063c2fd6fe71816ed899e1b328c08fd6c94107e05",
+    "retrievedAt": "2026-10-16T17:44:51.385810+00:00"
+  },
+  "aws-ratelimit": {
+    "url": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html",
+    "resolvedUrl": "https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-request-throttling.html",
+    "status": 200,
+    "characters": 6595,
+    "sha256": "38e32eeb520586da45d9f0f2b36c1cedc46ddd0a1a8e144c17582eaff35a03ab",
+    "retrievedAt": "2026-10-16T17:44:50.422420+00:00"
+  },
+  "algo-binary": {
+    "url": "https://docs.python.org/3/library/bisect.html",
+    "resolvedUrl": "https://docs.python.org/3/library/bisect.html",
+    "status": 200,
+    "characters": 9865,
+    "sha256": "a762ba5e4c44e3ada0091d26b9328a61596fcbb4c795a35c281116c8f54f8aca",
+    "retrievedAt": "2026-10-16T17:44:50.469512+00:00"
+  },
+  "algo-heap": {
+    "url": "https://docs.python.org/3/library/heapq.html",
+    "resolvedUrl": "https://docs.python.org/3/library/heapq.html",
+    "status": 200,
+    "characters": 16931,
+    "sha256": "7974c427b53c6ab07b1ebf42d0ca961c3e02d60253212d83ef28b889dc7b3760",
+    "retrievedAt": "2026-10-16T17:44:50.491067+00:00"
+  },
+  "algorithms-1-detail0": {
+    "url": "https://opendatastructures.org/ods-python/2_1_ArrayStack_Fast_Stack_O.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/2_1_ArrayStack_Fast_Stack_O.html",
+    "status": 200,
+    "characters": 5016,
+    "sha256": "8b19b56ea6c58b77919339fed7cd737cb505e052a7b11c720050df16c165e5ab",
+    "retrievedAt": "2026-10-16T17:44:51.665423+00:00"
+  },
+  "algorithms-1-detail1": {
+    "url": "https://opendatastructures.org/ods-python/2_1_ArrayStack_Fast_Stack_O.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/2_1_ArrayStack_Fast_Stack_O.html",
+    "status": 200,
+    "characters": 5016,
+    "sha256": "8b19b56ea6c58b77919339fed7cd737cb505e052a7b11c720050df16c165e5ab",
+    "retrievedAt": "2026-10-16T17:44:51.951465+00:00"
+  },
+  "algorithms-1-detail2": {
+    "url": "https://opendatastructures.org/ods-python/2_1_ArrayStack_Fast_Stack_O.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/2_1_ArrayStack_Fast_Stack_O.html",
+    "status": 200,
+    "characters": 5016,
+    "sha256": "8b19b56ea6c58b77919339fed7cd737cb505e052a7b11c720050df16c165e5ab",
+    "retrievedAt": "2026-10-16T17:44:52.207164+00:00"
+  },
+  "algorithms-1-detail3": {
+    "url": "https://opendatastructures.org/ods-python/2_1_ArrayStack_Fast_Stack_O.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/2_1_ArrayStack_Fast_Stack_O.html",
+    "status": 200,
+    "characters": 5016,
+    "sha256": "8b19b56ea6c58b77919339fed7cd737cb505e052a7b11c720050df16c165e5ab",
+    "retrievedAt": "2026-10-16T17:44:52.593881+00:00"
+  },
+  "algorithms-4-detail0": {
+    "url": "https://opendatastructures.org/ods-python/10_1_BinaryHeap_Implicit_Bi.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/10_1_BinaryHeap_Implicit_Bi.html",
+    "status": 200,
+    "characters": 3648,
+    "sha256": "cafa5dab01b246f73d50fab202ade32471b49b33ddf8bd1eab2e67a1c44c49c4",
+    "retrievedAt": "2026-10-16T17:44:52.604899+00:00"
+  },
+  "algorithms-4-detail1": {
+    "url": "https://opendatastructures.org/ods-python/10_1_BinaryHeap_Implicit_Bi.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/10_1_BinaryHeap_Implicit_Bi.html",
+    "status": 200,
+    "characters": 3648,
+    "sha256": "cafa5dab01b246f73d50fab202ade32471b49b33ddf8bd1eab2e67a1c44c49c4",
+    "retrievedAt": "2026-10-16T17:44:52.917145+00:00"
+  },
+  "algorithms-4-detail2": {
+    "url": "https://opendatastructures.org/ods-python/10_1_BinaryHeap_Implicit_Bi.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/10_1_BinaryHeap_Implicit_Bi.html",
+    "status": 200,
+    "characters": 3648,
+    "sha256": "cafa5dab01b246f73d50fab202ade32471b49b33ddf8bd1eab2e67a1c44c49c4",
+    "retrievedAt": "2026-10-16T17:44:53.148508+00:00"
+  },
+  "algorithms-4-detail3": {
+    "url": "https://opendatastructures.org/ods-python/10_1_BinaryHeap_Implicit_Bi.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/10_1_BinaryHeap_Implicit_Bi.html",
+    "status": 200,
+    "characters": 3648,
+    "sha256": "cafa5dab01b246f73d50fab202ade32471b49b33ddf8bd1eab2e67a1c44c49c4",
+    "retrievedAt": "2026-10-16T17:44:53.556725+00:00"
+  },
+  "algorithms-5-detail0": {
+    "url": "https://opendatastructures.org/ods-python/12_1_AdjacencyMatrix_Repres.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/12_1_AdjacencyMatrix_Repres.html",
+    "status": 200,
+    "characters": 3055,
+    "sha256": "be4935b6c497fb0eae9c6aeb21d4019962f3b3691e4c0e1dd0f4891a63415258",
+    "retrievedAt": "2026-10-16T17:44:53.582241+00:00"
+  },
+  "algorithms-5-detail1": {
+    "url": "https://opendatastructures.org/ods-python/12_1_AdjacencyMatrix_Repres.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/12_1_AdjacencyMatrix_Repres.html",
+    "status": 200,
+    "characters": 3055,
+    "sha256": "be4935b6c497fb0eae9c6aeb21d4019962f3b3691e4c0e1dd0f4891a63415258",
+    "retrievedAt": "2026-10-16T17:44:53.851387+00:00"
+  },
+  "algorithms-5-detail2": {
+    "url": "https://opendatastructures.org/ods-python/12_1_AdjacencyMatrix_Repres.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/12_1_AdjacencyMatrix_Repres.html",
+    "status": 200,
+    "characters": 3055,
+    "sha256": "be4935b6c497fb0eae9c6aeb21d4019962f3b3691e4c0e1dd0f4891a63415258",
+    "retrievedAt": "2026-10-16T17:44:54.118873+00:00"
+  },
+  "algorithms-5-detail3": {
+    "url": "https://opendatastructures.org/ods-python/12_Graphs.html#fig:graph",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/12_Graphs.html#fig:graph",
+    "status": 200,
+    "characters": 3363,
+    "sha256": "c9a4e623e7fac5d0712a94367a49ec557a5f97fb10e17d51571e2f5986718460",
+    "retrievedAt": "2026-10-16T17:44:54.507909+00:00"
+  },
+  "algorithms-hash": {
+    "url": "https://opendatastructures.org/ods-python/5_1_ChainedHashTable_Hashin.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/5_1_ChainedHashTable_Hashin.html",
+    "status": 200,
+    "characters": 7261,
+    "sha256": "0b7506497288e48bfc55affb42eef212b98977f3c68febaa840807088b42d909",
+    "retrievedAt": "2026-10-16T17:44:54.802688+00:00"
+  },
+  "algorithms-list": {
+    "url": "https://opendatastructures.org/ods-python/3_2_DLList_Doubly_Linked_Li.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/3_2_DLList_Doubly_Linked_Li.html",
+    "status": 200,
+    "characters": 3684,
+    "sha256": "7dda96300544889a57e2e4eba3691c48b2e761f8aed899cae953758b350faada",
+    "retrievedAt": "2026-10-16T17:44:54.822217+00:00"
+  },
+  "algorithms-traversal": {
+    "url": "https://opendatastructures.org/ods-python/12_3_Graph_Traversal.html",
+    "resolvedUrl": "https://opendatastructures.org/ods-python/12_3_Graph_Traversal.html",
+    "status": 200,
+    "characters": 7177,
+    "sha256": "6b375e7bd60f3e5050c9b73f7ad3673b8db4075c2e4af6440ee3ce87de1d88ee",
+    "retrievedAt": "2026-10-16T17:44:55.344061+00:00"
+  },
+  "algo-dijkstra": {
+    "url": "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.weighted.dijkstra_path.html",
+    "resolvedUrl": "https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.shortest_paths.weighted.dijkstra_path.html",
+    "status": 200,
+    "characters": 4423,
+    "sha256": "2c07cc98cffb7470aa9f52f64c0118daf0fc7ef842c41808917481a90d0f0210",
+    "retrievedAt": "2026-10-16T17:44:54.933797+00:00"
+  },
+  "rust-option": {
+    "url": "https://doc.rust-lang.org/std/option/index.html",
+    "resolvedUrl": "https://doc.rust-lang.org/std/option/index.html",
+    "status": 200,
+    "characters": 16431,
+    "sha256": "08969609f3591ba394bbe6b2b9f3dca1c96b25c7dcfa9c8f83b62c63803d99ea",
+    "retrievedAt": "2026-10-16T17:44:55.133764+00:00"
+  },
+  "rust-arc": {
+    "url": "https://doc.rust-lang.org/std/sync/struct.Arc.html",
+    "resolvedUrl": "https://doc.rust-lang.org/std/sync/struct.Arc.html",
+    "status": 200,
+    "characters": 76231,
+    "sha256": "23d64fe3895780e88c2ec4c980f62b2ed2ace046247e26810c378b1706d3e8ac",
+    "retrievedAt": "2026-10-16T17:46:27.126829+00:00"
+  },
+  "rust-mutex-api": {
+    "url": "https://doc.rust-lang.org/std/sync/struct.Mutex.html",
+    "resolvedUrl": "https://doc.rust-lang.org/std/sync/struct.Mutex.html",
+    "status": 200,
+    "characters": 18125,
+    "sha256": "899f1c6fd579214bc35eb418221085178c7ce43b501ca1dec110b5a168b613ee",
+    "retrievedAt": "2026-10-16T17:46:26.548783+00:00"
+  },
+  "schema": {
+    "url": "https://docs.confluent.io/platform/current/schema-registry/fundamentals/schema-evolution.html",
+    "resolvedUrl": "https://docs.confluent.io/platform/current/schema-registry/fundamentals/schema-evolution.html",
+    "status": 200,
+    "characters": 54458,
+    "sha256": "c3c080a3a48ee6843c2576f44873b4ed6cd8ea905b8ea51ed5a460d2c239ed03",
+    "retrievedAt": "2026-10-16T17:46:26.077327+00:00"
+  }
+}

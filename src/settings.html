@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'">
+  <title>LiveDesk AI — Settings</title>
+  <link rel="stylesheet" href="scrollbar.css">
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Settings</h1><button id="openPractice">Technical practice</button>
+      <span id="savedFlash">Saved ✓</span>
+    </header>
+
+    <details open>
+      <summary>OpenAI cloud setup</summary>
+      <div class="grid">
+        <label>OpenAI API key</label>
+        <input id="openaiKey" type="password" placeholder="Paste your API key here">
+      </div>
+      <div class="row"><button class="test" id="useOpenAI">Use OpenAI for answers, screen and speech</button><span class="testOut" id="outOpenAI"></span></div>
+      <p class="hint">Uses GPT-4.1 for answers and images, and GPT-4o mini Transcribe for speech. Captured speech and screen content are sent to OpenAI while those features are on. API billing is separate from ChatGPT. The key is saved in this app's local settings.</p>
+    </details>
+
+    <details open>
+      <summary>AI model <span class="hint-inline">Ollama · LM Studio · OpenRouter · OpenAI · Groq — any OpenAI-compatible API</span></summary>
+      <div class="grid">
+        <label>Base URL <small>(ends with /v1)</small></label>
+        <input id="llmUrl" placeholder="http://localhost:11434/v1">
+        <label>Model</label>
+        <span class="modelrow">
+          <select id="llmModelSel"></select>
+          <button class="mini" id="refreshModels" title="Load the model list from this endpoint">⟳</button>
+        </span>
+        <input id="llmModel" placeholder="type a custom model name" style="display:none">
+        <label>API key <small>(empty for local)</small></label>
+        <input id="llmKey" type="password" placeholder="sk-…">
+        <label>Temperature</label>
+        <input id="llmTemp" type="range" min="0" max="1.4" step="0.05">
+        <label>Max tokens</label>
+        <input id="llmMax" type="number" min="40" max="8000" step="10">
+      </div>
+      <div class="row">
+        <button class="test" id="setupOllama" title="Starts the Ollama server and installs the model above if missing">Set up local AI</button><span class="testOut" id="outOllama"></span>
+      </div>
+      <div class="row">
+        <button class="test" id="testLlm">Test connection</button><span class="testOut" id="outLlm"></span>
+      </div>
+    </details>
+
+    <details open>
+      <summary>Transcription (speech → text)</summary>
+      <div class="grid">
+        <label>Base URL <small>(ends with /v1)</small></label>
+        <input id="sttUrl" placeholder="http://127.0.0.1:8399/v1">
+        <label>Model</label>
+        <span class="modelrow">
+          <select id="sttModelSel"></select>
+          <button class="mini" id="refreshSttModels" title="Load the model list from this endpoint">⟳</button>
+        </span>
+        <input id="sttModel" placeholder="type a custom model name" style="display:none">
+        <label>API key <small>(empty for local)</small></label>
+        <input id="sttKey" type="password">
+        <label>Language</label>
+        <select id="sttLang">
+          <option value="">Auto-detect</option>
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          <option value="hi">Hindi</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="pt">Portuguese</option>
+          <option value="ru">Russian</option>
+          <option value="ar">Arabic</option>
+          <option value="zh">Chinese</option>
+          <option value="ja">Japanese</option>
+          <option value="ko">Korean</option>
+          <option value="it">Italian</option>
+        </select>
+      </div>
+      <div class="row">
+        <button class="test" id="testStt">Test server</button><span class="testOut" id="outStt"></span>
+      </div>
+      <p class="hint">Local default: run <b>start-stt.bat</b> (faster-whisper, port 8399). Cloud alternatives: Groq (<i>whisper-large-v3-turbo</i>) or OpenAI (<i>whisper-1</i>) — set their URL + key.</p>
+    </details>
+
+    <details open>
+      <summary>Behavior</summary>
+      <div class="grid">
+        <label>Mode</label>
+        <select id="mode">
+          <option value="study">Study / problem solving</option>
+          <option value="meeting">Meeting / call</option>
+          <option value="interview">Interview practice</option>
+          <option value="sales">Sales call</option>
+          <option value="custom">Custom</option>
+        </select>
+        <label>Answer length</label>
+        <select id="verbosity">
+          <option value="short">Short — 1-2 sentences</option>
+          <option value="medium">Medium — up to 4 sentences</option>
+          <option value="long">Detailed</option>
+        </select>
+        <label>Auto-answer</label>
+        <span class="checkwrap"><input type="checkbox" id="autoAnswer"><span>Generate an answer whenever a question is detected</span></span>
+        <label>Live mode</label>
+        <span class="checkwrap"><input type="checkbox" id="live"><span>Live captions while people talk, and start answering a question before they finish it</span></span>
+        <label>Mic sensitivity</label>
+        <input id="sensitivity" type="range" min="0" max="1" step="0.05">
+        <label>Context <small>(who you are, role, résumé, product…)</small></label>
+        <textarea id="context" rows="5" placeholder="e.g. Senior backend engineer, 6 yrs, Go/Postgres/K8s. Led migration of billing to event-driven. Targeting staff role."></textarea>
+      </div>
+    </details>
+
+    <details>
+      <summary>Screen understanding <span class="hint-inline">reads your screen with a vision model</span></summary>
+      <div class="grid">
+        <label>Capture monitor</label>
+        <select id="captureMonitor"><option value="primary">Primary display</option></select>
+        <label>Screen reader</label>
+        <span class="checkwrap"><input type="checkbox" id="screenAutoAnswer"><span>When the 👁 toggle is on in the overlay, read the screen periodically; answer on-screen questions automatically</span></span>
+        <label>Read every</label>
+        <span class="checkwrap"><input id="screenInterval" type="number" min="1" max="60" step="1"> <span>seconds</span></span>
+        <label>Vision model <small>(must support images)</small></label>
+        <span class="modelrow">
+          <select id="screenModelSel"></select>
+          <button class="mini" id="installVision" title="Start Ollama and install this vision model if missing">⤓</button>
+        </span>
+        <input id="screenModel" placeholder="custom vision model name" style="display:none">
+      </div>
+      <p class="hint">Needs a <b>vision-capable</b> model — text models can't read images. Default pick: <b>qwen3-vl:2b</b> (does both chat and vision; ~2 GB). Heavier: <i>qwen2.5vl:7b</i>, <i>minicpm-v</i>. The ⤓ button starts Ollama and installs it if missing.</p>
+    </details>
+
+    <details>
+      <summary>Overlay</summary>
+      <div class="grid">
+        <label>Stealth</label>
+        <span class="checkwrap"><input type="checkbox" id="stealth"><span>Hide from screen share &amp; recording (Zoom, Teams, Meet) — also hidden from Alt-Tab</span></span>
+        <label>Opacity</label>
+        <input id="opacity" type="range" min="0.3" max="1" step="0.05">
+      </div>
+    </details>
+
+    <details>
+      <summary>Hotkeys</summary>
+      <div class="hotkeys">
+        <div><kbd>Alt</kbd>+<kbd>Space</kbd></div><div>show / hide the overlay</div>
+        <div><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>A</kbd></div><div>answer now</div>
+        <div><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>S</kbd></div><div>capture current screen and answer</div>
+        <div><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd></div><div>collapse to pill</div>
+      </div>
+    </details>
+
+    <footer>
+      <button id="quit" class="quit">Quit LiveDesk AI</button>
+      <button id="save" class="save">Save settings</button>
+    </footer>
+  </main>
+
+  <script src="settings.js"></script>
+</body>
+</html>

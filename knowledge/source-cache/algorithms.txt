@@ -1,0 +1,46 @@
+Open Data Structures (in pseudocode)
+Next:
+Contents
+Up:
+Open Data Structures
+Contents
+Index
+Open Data Structures (in pseudocode)
+Pat Morin
+Date:
+Edition 0.1G
+Contents
+Acknowledgments
+Why This Book?
+1
+. Introduction
+2
+. Array-Based Lists
+3
+. Linked Lists
+4
+. Skiplists
+5
+. Hash Tables
+6
+. Binary Trees
+7
+. Random Binary Search Trees
+8
+. Scapegoat Trees
+9
+. Red-Black Trees
+10
+. Heaps
+11
+. Sorting Algorithms
+12
+. Graphs
+13
+. Data Structures for Integers
+14
+. External Memory Searching
+Bibliography
+Index
+About this document ...
+opendatastructures.org

@@ -1,0 +1,91 @@
+1. Introduction
+Next:
+1.1 The Need for
+Up:
+Open Data Structures (in
+Previous:
+Why This Book?
+Contents
+Index
+1
+. Introduction
+Every computer science curriculum in the world includes a course on data
+structures and algorithms.  Data structures are
+that
+important;
+they improve our quality of life and even save lives on a regular basis.
+Many multi-million and several multi-billion dollar companies have been
+built around data structures.
+How can this be?  If we stop to think about it, we realize that we
+interact with data structures constantly.
+Open a file: File system
+data structures are used to locate
+    the parts of that file on disk so they can be retrieved.  This isn't
+    easy; disks contain hundreds of millions of blocks.  The contents of your
+    file could be stored on any one of them.
+Look up a contact on your phone:  A data
+    structure is used to look up a phone number in your contact list
+based on partial
+    information even before you finish dialing/typing.  This isn't easy;
+    your phone may contain information about a lot of people--everyone
+    you have ever contacted via phone or email--and your phone doesn't
+    have a very fast processor or a lot of memory.
+Log in to your favourite social network:
+The network servers
+    use your login information to look up your account information.
+    This isn't easy; the most popular social networks have hundreds of
+    millions of active users.
+Do a web search:
+The search engine uses data structures to find
+    the web pages containing your search terms.  This isn't easy; there
+    are over 8.5 billion web pages on the Internet and each page contains
+    a lot of potential search terms.
+Phone emergency services (9-1-1):
+The emergency services network
+    looks up your phone number in a data structure that maps phone numbers
+    to addresses so that police cars, ambulances, or fire trucks can be
+    sent there without delay. This is important;  the person making the
+    call may not be able to provide the exact address they are calling
+    from and a delay can mean the difference between life or death.
+Subsections
+1
+.
+1
+The Need for Efficiency
+1
+.
+2
+Interfaces
+1
+.
+3
+Mathematical Background
+1
+.
+4
+The Model of Computation
+1
+.
+5
+Correctness, Time Complexity, and Space Complexity
+1
+.
+6
+Code Samples
+1
+.
+7
+List of Data Structures
+1
+.
+8
+Discussion and Exercises
+Next:
+1.1 The Need for
+Up:
+Open Data Structures (in
+Previous:
+Why This Book?
+Contents
+Index
+opendatastructures.org

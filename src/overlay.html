@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data:; script-src 'self' blob:; style-src 'self' 'unsafe-inline'; worker-src blob:">
+  <title>LiveDesk AI</title>
+  <link rel="stylesheet" href="scrollbar.css">
+  <link rel="stylesheet" href="overlay.css">
+</head>
+<body>
+  <!-- ================= expanded panel ================= -->
+  <div id="panel">
+    <header id="drag">
+      <div class="brand">
+        <span class="dot" id="statusDot"></span>
+        <span class="logo">LiveDesk<span>AI</span></span>
+        <span id="liveTag">LIVE</span>
+      </div>
+      <div class="meter" id="meter"><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="hbtns">
+        <button id="btnStealth" class="hbtn on" aria-label="Stealth: hidden from screen share &amp; recordings">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </button>
+        <button id="btnSettings" class="hbtn" aria-label="Settings">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        </button>
+        <button id="btnCollapse" class="hbtn" aria-label="Collapse (Alt+Shift+C)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 14 10 14 10 20"/><polyline points="20 10 14 10 14 4"/><line x1="14" y1="10" x2="21" y2="3"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <section id="answerCard">
+      <div class="label">
+        <span class="labeltxt">LIVE ANSWER<em id="ansMeta"></em></span>
+        <span class="ansActions">
+          <button id="btnCopy" aria-label="Copy answer">copy</button>
+          <button id="btnRegen" aria-label="Regenerate (Alt+Shift+A)">redo</button>
+        </span>
+      </div>
+      <div class="ansActions screenActions"><button id="btnCurrentScreen" aria-label="Capture the current screen and answer its question (Alt+Shift+S)">Current screen</button><label><input type="checkbox" id="screenDebug"> Debug</label><button id="btnPractice" aria-label="Open technical practice">Practice</button></div>
+      <div id="screenQuestion" hidden></div>
+      <details id="capturePreview" hidden><summary>Captured screen</summary><img id="captureImage" alt="Exact image sent to the screen reader"><pre id="captureText"></pre><pre id="captureDiagnostics"></pre></details>
+      <div id="answerText">Click <b>● Start</b> to listen. Answers appear here in real time.</div>
+    </section>
+
+    <nav class="tabs">
+      <button data-tab="live" class="on">Live transcript</button>
+      <button data-tab="ask">Ask</button>
+    </nav>
+
+    <section id="tab-live" class="tabpane on">
+      <div id="transcript"></div>
+    </section>
+
+    <section id="tab-ask" class="tabpane">
+      <textarea id="askBox" placeholder="Type a question and get a speakable answer…&#10;Enter to send · Shift+Enter for a new line"></textarea>
+      <button id="btnAsk" class="askbtn">Answer</button>
+    </section>
+
+    <div id="strip"></div>
+    <div id="hintStrip"></div>
+
+    <footer>
+      <button id="btnStart" class="primary"><span class="pulse"></span>Start</button>
+      <button id="btnMic" class="tog" aria-label="Capture microphone (your voice)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+      </button>
+      <button id="btnSys" class="tog on" aria-label="Capture system audio (other people)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+      </button>
+      <button id="btnScreen" class="tog" aria-label="Read the screen periodically using local OCR and optional vision fallback">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      </button>
+      <label class="switch" aria-label="Auto-answer when someone asks a question">
+        <input type="checkbox" id="autoAns" checked><span class="slider"></span>Auto
+      </label>
+      <span id="statusText">idle</span>
+    </footer>
+  </div>
+
+  <!-- ================= collapsed pill ================= -->
+  <div id="pill" aria-label="Click to expand">
+    <span class="dot" id="pillDot"></span>
+    <span class="pilllogo">LiveDesk<span>AI</span></span>
+    <div class="meter mini" id="pillMeter"><i></i><i></i><i></i></div>
+  </div>
+
+  <div id="toast"></div>
+  <div id="previewNote">browser preview — run <b>npm start</b> for the real app</div>
+
+  <script src="renderer/humanize.js"></script>
+  <script src="renderer/audio.js"></script>
+  <script src="renderer/live.js"></script>
+  <script src="coach/knowledge.js"></script>
+  <script src="coach/technical.js"></script>
+  <script src="coach/evaluator.js"></script>
+  <script src="renderer/llm.js"></script>
+  <script src="overlay.js"></script>
+</body>
+</html>

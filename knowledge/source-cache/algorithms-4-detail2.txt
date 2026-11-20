@@ -1,0 +1,145 @@
+10.1 BinaryHeap: An Implicit Binary Tree
+Next:
+10.2 MeldableHeap: A Randomized
+Up:
+10. Heaps
+Previous:
+10. Heaps
+Contents
+Index
+Subsections
+10
+.
+1
+.
+1
+Summary
+10
+.
+1
+BinaryHeap: An Implicit Binary Tree
+Our first implementation of a (priority) Queue is based on a technique
+that is over four hundred years old.
+Eytzinger's method
+allows us
+to represent a complete binary tree as an array by laying out the nodes
+of the tree in breadth-first order (see Section
+6.1.2
+).
+In this way, the root is stored at position 0, the root's left child is
+stored at position 1, the root's right child at position 2, the left
+child of the left child of the root is stored at position 3, and so
+on. See Figure
+10.1
+.
+Figure 10.1:
+Eytzinger's method represents a complete binary tree as an array.
+If we apply Eytzinger's method to a sufficiently large tree, some
+patterns emerge.  The left child of the node at index
+is at index
+and the right child of the node at index
+is at
+index
+.  The parent of the node at index
+is at
+index
+.
+A BinaryHeap uses this technique to implicitly represent a complete
+binary tree in which the elements are
+heap-ordered
+:
+The value
+stored at any index
+is not smaller than the value stored at index
+, with the exception of the root value,
+.  It follows
+that the smallest value in the priority Queue is therefore stored at
+position 0 (the root).
+In a BinaryHeap, the
+elements are stored in an array
+:
+Implementing the
+operation is fairly straightforward.  As with
+all array-based structures, we first check to see if
+is full (by checking if
+) and, if so, we grow
+.  Next, we place
+at location
+and increment
+.  At this point, all that remains is to ensure
+that we maintain the heap property.  We do this by repeatedly swapping
+with its parent until
+is no longer smaller than its parent.
+See Figure
+10.2
+.
+Figure 10.2:
+Adding the value 6 to a BinaryHeap.
+Implementing the
+operation, which removes the smallest value
+from the heap, is a little trickier.  We know where the smallest value is
+(at the root), but we need to replace it after we remove it and ensure
+that we maintain the heap property.
+The easiest way to do this is to replace the root with the value
+, delete
+that value, and decrement
+.  Unfortunately, the new root element is now
+probably not the smallest element, so it needs to be moved downwards.
+We do this by repeatedly comparing this element to its two children.
+If it is the smallest of the three then we are done.  Otherwise, we swap
+this element with the smallest of its two children and continue.
+Figure 10.3:
+Removing the minimum value, 4, from a BinaryHeap.
+As with other array-based structures, we will ignore the time spent in
+calls to
+, since these can be accounted for using the amortization
+argument from Lemma
+2.1
+.  The running times of
+both
+and
+then depend on the height of the (implicit)
+binary tree.  Luckily, this is a
+complete
+binary tree;  every level
+except the last has the maximum possible number of nodes.  Therefore,
+if the height of this tree is
+, then it has at least
+nodes.
+Stated another way
+Taking logarithms on both sides of this equation gives
+Therefore, both the
+and
+operation run in
+time.
+10
+.
+1
+.
+1
+Summary
+The following theorem summarizes the performance of a BinaryHeap:
+Theorem
+10
+..
+1
+A BinaryHeap implements the (priority) Queue interface.  Ignoring
+  the cost of calls to
+, a BinaryHeap supports the operations
+and
+in
+time per operation.
+Furthermore, beginning with an empty BinaryHeap, any sequence of
+and
+operations results in a total of
+time spent during all calls to
+.
+Next:
+10.2 MeldableHeap: A Randomized
+Up:
+10. Heaps
+Previous:
+10. Heaps
+Contents
+Index
+opendatastructures.org

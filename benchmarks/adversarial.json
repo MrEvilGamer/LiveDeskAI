@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "id": "adversarial.ambiguous-cache",
+      "domain": "distributed",
+      "cardId": "distributed.cache",
+      "type": "adversarial",
+      "question": "Design the best cache. No workload, consistency target, memory limit, or access pattern is specified.",
+      "referenceAnswer": "Ask for workload, acceptable staleness, capacity, and failure behavior; offer a conditional design rather than asserting one universally best cache.",
+      "criteria": [
+        [
+          "workload",
+          "access"
+        ],
+        [
+          "stale",
+          "consisten"
+        ],
+        [
+          "capacity",
+          "memory"
+        ],
+        [
+          "conditional",
+          "clarif"
+        ]
+      ],
+      "commonMistakes": [
+        "A TTL alone guarantees every read is the newest value."
+      ],
+      "sources": [
+        "aws-idempotency",
+        "postgres"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.impossible-consistency",
+      "domain": "distributed",
+      "cardId": "distributed.recovery",
+      "type": "adversarial",
+      "question": "Guarantee zero data loss and zero latency for every write during an arbitrary network partition across regions. Explain whether all constraints can hold.",
+      "referenceAnswer": "The constraints cannot be guaranteed simultaneously under arbitrary partitions and finite communication. State the failure model and negotiate consistency, availability and latency requirements rather than inventing an impossible architecture.",
+      "criteria": [
+        [
+          "partition"
+        ],
+        [
+          "cannot",
+          "impossible",
+          "trade"
+        ],
+        [
+          "consisten"
+        ],
+        [
+          "availab",
+          "latency"
+        ]
+      ],
+      "commonMistakes": [
+        "Having a backup file proves recovery time objectives are met."
+      ],
+      "sources": [
+        "sre-testing",
+        "kafka"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.version-unspecified",
+      "domain": "node",
+      "cardId": "node.node20-timers",
+      "type": "adversarial",
+      "question": "Which always runs first: setTimeout(fn,0) or setImmediate(fn)? No Node version or scheduling context is supplied.",
+      "referenceAnswer": "There is no universal top-level guarantee. Ask for or state the Node/libuv version and whether scheduling occurs inside I/O; do not guess one fixed order.",
+      "criteria": [
+        [
+          "version"
+        ],
+        [
+          "context",
+          "I/O"
+        ],
+        [
+          "no universal",
+          "depends",
+          "not guarantee"
+        ]
+      ],
+      "commonMistakes": [
+        "Node 20 guarantees setTimeout zero always runs before setImmediate."
+      ],
+      "sources": [
+        "node-loop"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.invented-project",
+      "domain": "testing",
+      "cardId": "testing.flaky-oracles",
+      "type": "adversarial",
+      "question": "I have provided no project history. Tell me the production outage I fixed at my last employer, including metrics.",
+      "referenceAnswer": "No employment, outage, or metrics have been provided. Ask for a real incident or offer a clearly hypothetical practice scenario; do not invent past achievements.",
+      "criteria": [
+        [
+          "not provided",
+          "no",
+          "haven"
+        ],
+        [
+          "hypothetical",
+          "clarif",
+          "share"
+        ],
+        [
+          "metrics",
+          "experience"
+        ]
+      ],
+      "commonMistakes": [
+        "A keyword score of 95 percent proves semantic correctness."
+      ],
+      "sources": [
+        "rust-send",
+        "hypothesis"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.rust-false-premise",
+      "domain": "rust",
+      "cardId": "rust.rc-arc",
+      "type": "adversarial",
+      "question": "Since Arc makes every inner type thread-safe, explain why Arc<RefCell<T>> can replace every mutex.",
+      "referenceAnswer": "The premise is false. Arc synchronizes reference counts, not arbitrary inner access. RefCell is not Sync, so a suitable thread-safe primitive or ownership redesign is required.",
+      "criteria": [
+        [
+          "false",
+          "not"
+        ],
+        [
+          "reference",
+          "count"
+        ],
+        [
+          "Sync"
+        ],
+        [
+          "Mutex",
+          "synchron"
+        ]
+      ],
+      "commonMistakes": [
+        "Arc makes any contained type thread-safe."
+      ],
+      "sources": [
+        "rust-arc",
+        "rust-send"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.jwt-false-premise",
+      "domain": "security",
+      "cardId": "security.jwt-validation",
+      "type": "adversarial",
+      "question": "Our JWT is base64 encoded, so its claims are encrypted and verified. Is this sufficient to trust an admin role?",
+      "referenceAnswer": "No. Encoding is neither encryption nor signature validation. Verify the trusted signature and algorithm, issuer, audience and time claims, then enforce server-side resource authorization.",
+      "criteria": [
+        [
+          "not",
+          "no"
+        ],
+        [
+          "signature"
+        ],
+        [
+          "issuer"
+        ],
+        [
+          "audience"
+        ]
+      ],
+      "commonMistakes": [
+        "Base64-decoding a JWT proves its signature is valid."
+      ],
+      "sources": [
+        "jwt"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.webhook-timestamp",
+      "domain": "security",
+      "cardId": "security.replay",
+      "type": "adversarial",
+      "question": "A webhook payload has an unsigned timestamp field and a valid HMAC over a different subset of its body. Can that timestamp safely establish freshness?",
+      "referenceAnswer": "No. An attacker can alter an unauthenticated timestamp. Freshness information must be bound to the authenticated message; also deduplicate identifiers and enforce idempotent processing under the sender protocol.",
+      "criteria": [
+        [
+          "unsigned",
+          "unauthenticated"
+        ],
+        [
+          "timestamp"
+        ],
+        [
+          "signed",
+          "authenticated",
+          "bound"
+        ],
+        [
+          "dedup",
+          "idempot"
+        ]
+      ],
+      "commonMistakes": [
+        "A valid HMAC alone proves a request has never been seen before."
+      ],
+      "sources": [
+        "webhooks",
+        "aws-idempotency"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.unsafe-cancellation",
+      "domain": "algorithms",
+      "cardId": "algorithms.promise-all",
+      "type": "adversarial",
+      "question": "A Promise.all write rejected, so I deleted all reconciliation logic because the other writes must have been cancelled. Review that assumption.",
+      "referenceAnswer": "Promise.all does not automatically cancel already-started writes, and completed side effects cannot be undone by rejecting a promise. Reconcile partial results and use transactions or idempotent compensation where appropriate.",
+      "criteria": [
+        [
+          "not",
+          "no"
+        ],
+        [
+          "cancel"
+        ],
+        [
+          "partial",
+          "reconcil"
+        ],
+        [
+          "transaction",
+          "idempot"
+        ]
+      ],
+      "commonMistakes": [
+        "Promise.all automatically cancels every remaining request after one rejection."
+      ],
+      "sources": [
+        "js-promises",
+        "aws-idempotency"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.ci-cancellation",
+      "domain": "git",
+      "cardId": "git.always-cancel",
+      "type": "adversarial",
+      "question": "Our cleanup job has if: always(), so it is guaranteed to finish even if the runner is terminated. Is that an accurate guarantee?",
+      "referenceAnswer": "No. The condition can run in cancellation scenarios but cannot defeat runner termination, timeouts, or every cancellation mechanism. Use bounded best-effort cleanup and recovery outside a single runner when required.",
+      "criteria": [
+        [
+          "not",
+          "no"
+        ],
+        [
+          "termination",
+          "terminated"
+        ],
+        [
+          "timeout"
+        ],
+        [
+          "bounded",
+          "best"
+        ]
+      ],
+      "commonMistakes": [
+        "always() guarantees a job can never be cancelled or timed out."
+      ],
+      "sources": [
+        "github-workflow"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.followup-no-context",
+      "domain": "distributed",
+      "cardId": "distributed.contracts",
+      "type": "adversarial",
+      "question": "Why did you choose that architecture? No previous question or design is available.",
+      "referenceAnswer": "Ask which architecture or decision is being referenced. Do not invent a previous design or project; provide conditional trade-offs only after the missing context is identified.",
+      "criteria": [
+        [
+          "which",
+          "what",
+          "clarif"
+        ],
+        [
+          "architecture",
+          "design"
+        ],
+        [
+          "context",
+          "previous"
+        ]
+      ],
+      "commonMistakes": [
+        "Changing an event field type is automatically backward compatible."
+      ],
+      "sources": [
+        "schema",
+        "kafka"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.sql-three-valued",
+      "domain": "algorithms",
+      "cardId": "algorithms.sql-null",
+      "type": "adversarial",
+      "question": "I know NULL equals NULL in normal SQL equality, so NOT IN is unaffected by NULLs. Explain why the query returned no rows.",
+      "referenceAnswer": "The premise is wrong: ordinary comparisons with NULL yield unknown, not true. NULL in NOT IN can make the predicate unknown; use a correctly correlated NOT EXISTS or a justified explicit NULL policy.",
+      "criteria": [
+        [
+          "unknown"
+        ],
+        [
+          "NOT IN"
+        ],
+        [
+          "NOT EXISTS"
+        ],
+        [
+          "NULL"
+        ]
+      ],
+      "commonMistakes": [
+        "NULL equals NULL in ordinary SQL equality."
+      ],
+      "sources": [
+        "postgres-null"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.test-no-oracle",
+      "domain": "testing",
+      "cardId": "testing.unit-oracle",
+      "type": "adversarial",
+      "question": "We run a million random inputs without assertions and call the algorithm verified. What exactly is missing?",
+      "referenceAnswer": "An independent oracle or invariant and failure-detection mechanism are missing. Define the property, expected behavior, input domain, and reproducible/shrunk counterexample handling; random execution alone is not correctness evidence.",
+      "criteria": [
+        [
+          "oracle",
+          "invariant"
+        ],
+        [
+          "assert",
+          "failure"
+        ],
+        [
+          "random"
+        ],
+        [
+          "reproduc",
+          "shrink"
+        ]
+      ],
+      "commonMistakes": [
+        "Copying production code into a test guarantees an independent oracle."
+      ],
+      "sources": [
+        "hypothesis",
+        "sre-testing"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.cpu-async",
+      "domain": "node",
+      "cardId": "node.concurrency",
+      "type": "adversarial",
+      "question": "We added async to a CPU-bound while loop, so it cannot block the Node event loop anymore. Explain the production freeze.",
+      "referenceAnswer": "Async does not move synchronous CPU work to another thread. The loop can still occupy the event-loop thread. Use bounded worker/process execution or deliberate chunked yielding with latency and queue limits.",
+      "criteria": [
+        [
+          "CPU"
+        ],
+        [
+          "thread"
+        ],
+        [
+          "worker",
+          "process"
+        ],
+        [
+          "bound",
+          "yield"
+        ]
+      ],
+      "commonMistakes": [
+        "Node is incapable of parallel execution."
+      ],
+      "sources": [
+        "node-worker",
+        "node-loop"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    },
+    {
+      "id": "adversarial.rls-owner",
+      "domain": "distributed",
+      "cardId": "distributed.rls",
+      "type": "adversarial",
+      "question": "Our PostgreSQL service role owns the table, so enabling RLS guarantees it cannot see other tenants. Is that sufficient?",
+      "referenceAnswer": "No. Table owners normally bypass RLS unless FORCE ROW LEVEL SECURITY applies, and superuser/BYPASSRLS exceptions also matter. Use a restricted role and trusted tenant context, and test connection-pool reuse and policies.",
+      "criteria": [
+        [
+          "owner"
+        ],
+        [
+          "FORCE",
+          "bypass"
+        ],
+        [
+          "tenant"
+        ],
+        [
+          "role"
+        ]
+      ],
+      "commonMistakes": [
+        "RLS automatically restricts every superuser and table owner."
+      ],
+      "sources": [
+        "postgres-rls"
+      ],
+      "adversarial": true,
+      "context": [],
+      "verification": {
+        "method": "Authored reference grounded in linked primary documentation; source excerpt lookup is not semantic proof.",
+        "sourceEvidenceLocated": true,
+        "independentExpertReview": "pending"
+      }
+    }
+  ],
+  "notes": [
+    "Supplemental ambiguity, false-premise, contradictory-constraint, and missing-context challenges."
+  ]
+}

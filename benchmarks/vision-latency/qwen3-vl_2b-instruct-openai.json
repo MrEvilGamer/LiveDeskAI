@@ -1,0 +1,42 @@
+{
+  "createdAt": "2026-10-29T15:45:33.638Z",
+  "model": "qwen3-vl:2b-instruct",
+  "endpoint": "openai",
+  "origin": "http://127.0.0.1:11434",
+  "sampleOnly": true,
+  "realScreenCaptured": false,
+  "fixture": "synthetic-question.png",
+  "prompt": "Transcribe the question and instruction visible in this image, exactly. Output only the visible text. Do not answer the question.",
+  "expectedText": "What is dynamic programming? Give a short C++ example.",
+  "parameters": {
+    "think": false,
+    "num_ctx": 8192,
+    "num_predict": 96,
+    "temperature": 0,
+    "timeoutMs": 20000
+  },
+  "note": "One controlled synthetic sample, not a benchmark. Streamed to measure first content token; application native vision uses nonstreaming responses.",
+  "loading": {
+    "ok": true,
+    "totalMs": 4788.3,
+    "ollamaLoadMs": null
+  },
+  "inference": {
+    "ok": true,
+    "headersMs": 7516,
+    "firstTokenMs": 7516.5,
+    "firstContentTokenMs": 7516.5,
+    "output": "What is dynamic programming?\nGive a short C++ example.",
+    "thinkingCharacters": 0,
+    "usage": {
+      "prompt_tokens": 1096,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "completion_tokens": 13,
+      "total_tokens": 1109
+    },
+    "totalMs": 7726.1,
+    "exactText": true
+  }
+}

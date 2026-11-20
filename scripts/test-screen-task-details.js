@@ -1,0 +1,28 @@
+const assert=require('assert/strict'),fs=require('fs'),vm=require('vm');
+const main=fs.readFileSync('main.js','utf8');
+(async()=>{
+ let visible=true,restored=0,fail=false;
+ const panel={isDestroyed:()=>false,isVisible:()=>visible,hide:()=>visible=false,showInactive:()=>{visible=true;restored++;}};
+ const image={getSize:()=>({width:2,height:2}),toBitmap:()=>Buffer.alloc(16),resize(){return this;},toDataURL:()=> 'data:image/png;base64,test'};
+ const display={id:1,size:{width:1280,height:900},bounds:{x:0,y:0}};
+ const capture=vm.createContext({cfg:{screen:{}},overlay:panel,settingsWin:null,electronScreen:{getAllDisplays:()=>[display],getPrimaryDisplay:()=>display},desktopCapturer:{getSources:async()=>{assert.equal(visible,false);if(fail)throw new Error('capture failed');return[{display_id:'1',thumbnail:image}];}},nativeImage:{createFromBitmap:()=>image},setTimeout:(fn,ms)=>ms===150?fn():setTimeout(fn,ms),clearTimeout,Buffer});
+ vm.runInContext(main.slice(main.indexOf('async function captureScreenFrame('),main.indexOf('let captureQueue')),capture);
+ assert.equal((await capture.captureScreenFrame({unobstructed:true})).ok,true);assert.equal(visible,true);
+ fail=true;assert.equal((await capture.captureScreenFrame({unobstructed:true})).ok,false);assert.equal(visible,true);assert.equal(restored,2);
+ console.log('PASS manual capture hides overlay and restores it after success or failure');
+ let vision=true,queries=0;
+ const helpers=vm.createContext({fetch:async()=>{queries++;return{ok:true,json:async()=>({capabilities:vision?['vision','completion']:['completion']})};},AbortSignal});
+ vm.runInContext(main.slice(main.indexOf('function isOllamaEndpoint('),main.indexOf('// Consume both supported streaming protocols')),helpers);
+ const messages=[{role:'user',content:[{type:'text',text:'Question and code'},{type:'image_url',image_url:{url:'data:image/png;base64,abc'}}]}];
+ let converted=await helpers.ollamaInputMessages(messages,'http://localhost:11434/v1','vision');assert.equal(converted[0].images[0],'abc');
+ await helpers.ollamaInputMessages(messages,'http://localhost:11434/v1','vision');assert.equal(queries,1);
+ vision=false;converted=await helpers.ollamaInputMessages(messages,'http://localhost:11434/v1','text');assert.equal(converted[0].images,undefined);assert.equal(converted[0].content,'Question and code');
+ console.log('PASS local vision model receives screenshot; text-only model receives OCR text; capability lookup cached');
+ const prompt=vm.createContext({window:{}});vm.runInContext(fs.readFileSync('src/renderer/llm.js','utf8'),prompt);
+ const cfg={llm:{baseUrl:'http://localhost:11434/v1'},behavior:{mode:'study'}};
+ const task='What is the result?\n'+'old transcript '.repeat(500)+'\nfunction calculate() { return 12; }';
+ const built=prompt.buildMessages(cfg,[],task).at(-1).content;
+ assert.match(built,/What is the result/);assert.match(built,/return 12/);
+ assert.ok(!/\stitle=/.test(fs.readFileSync('src/overlay.html','utf8')));
+ console.log('PASS long task retains question and lower code; overlay has no native tooltip titles');
+})().catch(e=>{console.error(e);process.exitCode=1;});

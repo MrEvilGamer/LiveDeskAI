@@ -1,0 +1,50 @@
+/* Shared WebKit scrollbars for every window (overlay + settings).
+ *
+ * IMPORTANT: do not add `scrollbar-width` or `scrollbar-color` anywhere. In modern
+ * Chromium those standard properties override ::-webkit-scrollbar and silently turn
+ * this styling off. */
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 6px 0;
+}
+
+/* The thumb is drawn inside a transparent 3px border via background-clip, which is
+ * what gives the slim floating-pill look while keeping a generous hit area. */
+::-webkit-scrollbar-thumb {
+  min-height: 40px;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-clip: padding-box;
+  background-image: linear-gradient(180deg, rgba(139, 92, 246, 0.50), rgba(56, 189, 248, 0.50));
+  transition: background-color 0.2s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(180deg, rgba(139, 92, 246, 0.85), rgba(56, 189, 248, 0.85));
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-image: linear-gradient(180deg, #8b5cf6, #38bdf8);
+}
+
+::-webkit-scrollbar-corner { background: transparent; }
+
+/* no arrow buttons */
+::-webkit-scrollbar-button { display: none; width: 0; height: 0; }
+
+/* overlay panels use a slimmer rail so it never crowds the text */
+#transcript::-webkit-scrollbar,
+#answerText::-webkit-scrollbar,
+#askBox::-webkit-scrollbar { width: 10px; }
+#answerText::-webkit-scrollbar-track,
+#askBox::-webkit-scrollbar-track { margin: 2px 0; }
+
+/* Keep the same arrow over text, controls, and their generated content. */
+html, body, *, *::before, *::after { cursor: default !important; }

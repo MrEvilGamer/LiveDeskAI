@@ -1,0 +1,31 @@
+{
+  "createdAt": "2026-10-29T15:44:32.194Z",
+  "model": "frob/qwen3.5-instruct:4b",
+  "endpoint": "openai",
+  "origin": "http://127.0.0.1:11434",
+  "sampleOnly": true,
+  "realScreenCaptured": false,
+  "fixture": "synthetic-question.png",
+  "prompt": "Transcribe the question and instruction visible in this image, exactly. Output only the visible text. Do not answer the question.",
+  "expectedText": "What is dynamic programming? Give a short C++ example.",
+  "parameters": {
+    "think": false,
+    "num_ctx": 8192,
+    "num_predict": 96,
+    "temperature": 0,
+    "timeoutMs": 20000
+  },
+  "note": "One controlled synthetic sample, not a benchmark. Streamed to measure first content token; application native vision uses nonstreaming responses.",
+  "loading": {
+    "ok": true,
+    "totalMs": 33.5,
+    "ollamaLoadMs": null
+  },
+  "inference": {
+    "ok": false,
+    "stage": "image-inference",
+    "totalMs": 20008.6,
+    "errorName": "TimeoutError",
+    "error": "The operation was aborted due to timeout"
+  }
+}

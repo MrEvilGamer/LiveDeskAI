@@ -1,0 +1,59 @@
+{
+  "at": "2026-10-16T21:27:27.481Z",
+  "results": [
+    {
+      "name": "Core regression suite",
+      "command": "C:\\Program Files\\nodejs\\node.exe C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js test",
+      "passed": true,
+      "exitCode": 0,
+      "totalMs": 6577,
+      "stdout": "\n> livedesk-ai@1.0.0 test\n> node scripts/test-vad.js && node scripts/test-stream.js && node scripts/test-humanize.js && node scripts/test-sse.js && node scripts/test-reliability.js && node scripts/test-screen-continuity.js && node scripts/test-quality.js && node scripts/test-answer-recovery.js && node scripts/test-audio-quality.js && node scripts/test-conversation-memory.js && node scripts/test-echo-recovery.js && node scripts/test-greeting-replies.js && node scripts/test-screen-task-details.js && node scripts/test-manual-full-task.js && node scripts/test-technical-coach.js && node scripts/test-screen-repair.js && node scripts/test-screen-request-races.js && node scripts/test-screen-prompt-equivalence.js\n\nstart idx 19 end idx 110 blocks 52\ntotal block samples 106368 == end.total 106368 ( 2.22 s )\nexpected ≈ 0.3s pre-roll + 1.5s speech + 0.42s tail ≈ 2.2s\nfirst block starts with pre-roll? 2048\nclick burst -> total 0.74s, voiced 0.011s (renderer drops <0.12s)\n16 s continuous -> ends emitted: 1\nPASS\nPASS interim requests fire while still speaking n=14\nPASS never more than 1 interim in flight max=1\nPASS final emitted after end [\"I:what is your\",\"I:what is your\",\"I:what is your\",\"I:what is your\",\"I:what is your\",\"I:what is your\",\"I:what is your\",\"I:what is your\",\"I:what is your\",\"I:what is your\",\"I:what is your\",\"I:what is your\",\"I:what is your\",\"I:what is your\",\"F:what is your biggest strength?\"]\nPASS no interim after final \nPASS final WAV = 16 kHz of full utterance (~44+2*16000*1.7) bytes=54656\nPASS short click discarded without any STT call [\"D\"]\nPASS \"Thank you.\" hallucination discarded [\"D\"]\nPASS finals emitted in order despite out-of-order completion [\"utt1\",\"utt2\"]\nPASS late interim result is dropped, final wins [\"F:final text\"]\nPASS final retried once on transient error [\"ok after retry\"]\nALL PASS\nPASS \"Sure! I'd say **staying calm** matters most.\" -> \"I'd say staying calm matters most.\"\nPASS \"Use `my_var_name` and snake_case_ok here\" -> \"Use my_var_name and snake_case_ok here\"\nPASS \"Here's what you could say: I led the migration.\" -> \"I led the migration.\"\nPASS \"\\\"I led the migration.\\\"\" -> \"I led the migration.\"\nPASS \"- first\\n- second\" -> \"first\\nsecond\"\nPASS \"x = a*b + c\" -> \"x = a*b + c\"\nPASS \"This is *really* good\" -> \"This is really good\"\nPASS \"**half\" -> \"half\"\nSTREAM OK: \"Hello there\"\nPASS stopped sessions ignore outstanding final transcriptions\nPASS screen tasks without question marks are answered and selected by Answer now\nPASS duplicate speech is dropped and a new question queues behind the active answer\nPASS Current screen captures fresh images and answers with periodic reading off\nPASS slow periodic screen reads cannot masquerade as fresh questions\nPASS a slow screen read is accepted when a fresh capture confirms the screen is unchanged\nPASS unchanged screenshots are not re-read or answered again\nPASS small changes are re-read because a one-character code edit can resemble a cursor change\nPASS screenshots continue while one model read is pending, without parallel inference\nPASS hung screen requests time out and cancel backend work\nPASS pressing Current screen again captures anew and ignores superseded results\nPASS early streaming events are preserved before the request ID arrives\nPASS cancellation before request-ID arrival aborts the backend request\nPASS copied interviewer questions are blocked during streaming and rejected at completion\nPASS large screen history and user context fit the local prompt budget\nPASS Ollama interview prompts preserve project facts beyond the old 1000-character cutoff\nPASS OpenAI token parameters and Ollama image message conversion\nPASS latest wrapped question, scrolling overlap, repeated captures, unrelated questions\nPASS real stream parser: split chunks, terminal EOF, stop reasons, truncation, model errors, disconnection\nPASS hidden reasoning never leaks into code; actual code is preserved\nPASS model deadlines are explicit and do not trigger repeated long retries\nPASS interrupted answer automatically recovers\nPASS stale retries cannot replace a newer question\nPASS recovery is bounded and preserves partial output without a false offline label\nPASS downsampling rejects high-frequency audio that previously aliased into speech\nPASS brief verified speech and genuine thank-you phrases survive filtering\nPASS follow-ups receive previous question and draft; redo excludes old answer; history respects prompt budget\nPASS completed replies are remembered; cancelled, stale, and failed replies excluded; redo replaces draft; memory bounded\nPASS echo retries use a clearer prompt, are bounded, preserve selected model, and cannot override newer questions\nPASS hello -> Hello!\nPASS HI -> hi\nPASS Good morning! -> Good morning.\nPASS Thank you -> Thank you!\nPASS What is a tuple? -> copied question rejected\nPASS What is a tuple? -> An immutable sequence.\nPASS manual capture hides overlay and restores it after success or failure\nPASS local vision model receives screenshot; text-only model receives OCR text; capability lookup cached\nPASS long task retains question and lower code; overlay has no native tooltip titles\nPASS complete OCR preserves lower code without vision; fallback preserves full image and lower crop; absent code is an explicit incomplete task\nPASS 210 distinct sourced cases, seven domains, adversarial and follow-up cases\nPASS greeting bypass, technical routing, retrieval, follow-up resolution, architecture shape\nPASS serious-error hard fail, concrete correction, and negated-claim false-positive checks\nPASS reviewer schema validation and independent-review factual veto\nPASS actual upgraded prompt budget includes reference notes and bounded user profile\nPASS complete top/bottom extraction, exact cache, declarative tasks, incomplete and empty screens, overlapping scrolls, rapid cancellation, sanitized errors and timeout categories\nPASS baseline stale answer reproduced; repaired capture and queued paints reject old content; physical DPI capture, monitor identity and categorized failures\nPASS all 420 technical benchmark prompt pairs are byte-identical; retrieval and factual guards remain enabled\n",
+      "stderr": ""
+    },
+    {
+      "name": "Technical executable checks",
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/test-technical-oracles.js",
+      "passed": true,
+      "exitCode": 0,
+      "totalMs": 1508,
+      "stdout": "PASS CommonJS nextTick and Promise order on installed Node\nPASS ESM top-level Promise and nextTick order on installed Node\nPASS Const reassignment throws but object mutation is permitted\nPASS Promise.all does not cancel another already-started operation\nPASS Writable false accepts the chunk and emits drain\nPASS RFC 7636 S256 published PKCE vector\nPASS Webhook HMAC binds exact raw bytes and detects tampering\nPASS A decodable signed-token payload can be tampered without signature validity\nPASS Rust move invalidates String binding\nPASS Rust returning local reference is rejected\nPASS Rust Rc is not Send\nPASS Rust Arc RefCell is not thread-safe shared state\nPASS Rust Box recursive structure has finite size\nPASS Rust Result question mark propagates parse error\nPASS Rust Option question mark needs explicit conversion in Result return\nPASS Rust owned String return does not dangle\nPASS Rust RefCell conflicting reentrant borrow panics safely\nPASS Bash :- substitutes without assignment\nPASS Bash := assigns the default\nPASS Bash pipefail reports producer failure\nPASS SQL NULL and outer-join oracles on SQLite\nPASS Transactional outbox rollback and duplicate-relay simulation on SQLite\n",
+      "stderr": ""
+    },
+    {
+      "name": "Runtime factual veto",
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/test-runtime-quality-gate.js",
+      "passed": true,
+      "exitCode": 0,
+      "totalMs": 64,
+      "stdout": "PASS runtime factual veto displays reference correction and never remembers the rejected claim\n",
+      "stderr": ""
+    },
+    {
+      "name": "Practice UI",
+      "command": "C:\\Users\\valen\\Desktop\\LiveDeskAI\\node_modules\\electron\\dist\\electron.exe scripts/test-practice-ui.js",
+      "passed": true,
+      "exitCode": 0,
+      "totalMs": 4487,
+      "stdout": "\r\nPASS visible practice UI loads all questions, filters topics, fails serious errors, shows sources, warns on edited rubrics, and clears stale drafts\n",
+      "stderr": ""
+    },
+    {
+      "name": "Live pipeline",
+      "command": "C:\\Program Files\\nodejs\\node.exe scripts/test-live.js",
+      "passed": true,
+      "exitCode": 0,
+      "totalMs": 13014,
+      "stdout": "\n— A: question answered while still being asked —\nPASS D: live caption appeared while still speaking\nPASS A: exactly one LLM request for this question   n=1\nPASS A: LLM request started BEFORE the final transcript returned   LLM started 1147 ms before the final transcript\nPASS A: LLM request started before the speaker even finished   1398 ms after speech began vs. 2336 ms speech length\nPASS A: early answer NOT restarted when the final confirmed it\nPASS A: full answer rendered, no caret char in copyable text   \"it up with clear communication\"\nPASS A: meta keeps early + first-word latency AND shows total   \"early · first word 0.05s · 0.9s total\"\nPASS D: live caption replaced by exactly one final line   [\"What would you say is your biggest strength?\"]\n\n— B: question changes before it ends —\nPASS B: second (corrected) LLM request issued   n=2\nPASS B: superseded early answer was aborted   aborted=1\nPASS B: final answer is for the full question   \"What is your biggest strength, and how did it help on your last big project at work?\"\n\n— C: statements are not answered —\nPASS C: no LLM request for a non-question   n=0\nPASS C: statement still lands in the transcript   lines=1\n\nALL PASS\n",
+      "stderr": ""
+    },
+    {
+      "name": "Speech service",
+      "command": "python scripts/test_stt.py",
+      "passed": true,
+      "exitCode": 0,
+      "totalMs": 2770,
+      "stdout": "[stt] loaded 'base' on cuda\r\n[stt] final   2.0s audio -> 30 chars in 351 ms\r\nPASS final returns text {'text': 'what is your biggest strength?', 'ms': 351, 'speechVerified': True}\r\nPASS temperature=0.0 (no fallback re-decode) \r\nPASS final decode uses five-beam search \r\nPASS without_timestamps \r\nPASS vad_filter off \r\nPASS condition_on_previous_text off \r\nPASS silence skips decoder {'text': '', 'ms': 0}\r\n[stt] final   3.0s audio -> 0 chars in 350 ms\r\nPASS \"thank you.\" hallucination dropped {'text': '', 'ms': 350, 'speechVerified': False}\r\nPASS interim skipped while a decode is running {'text': '', 'skipped': True, 'ms': 0}\r\n[stt] final   2.0s audio -> 30 chars in 350 ms\r\n[stt] interim 1.5s audio -> 30 chars in 350 ms\r\nPASS interim runs when idle {'text': 'what is your biggest strength?', 'ms': 350, 'speechVerified': True}\r\nPASS interim skipped while finals queued \r\n[stt] final   2.0s audio -> 30 chars in 351 ms\r\n[stt] final   2.0s audio -> 30 chars in 701 ms\r\nPASS both queued finals completed \r\nPASS bad wav -> 400 400\r\nALL PASS\r\n",
+      "stderr": ""
+    }
+  ]
+}

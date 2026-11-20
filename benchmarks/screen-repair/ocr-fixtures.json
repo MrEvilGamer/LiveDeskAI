@@ -1,0 +1,971 @@
+{
+  "at": "2026-10-16T21:12:58.248Z",
+  "method": "Actual packaged/local RapidOCR with native Windows fallback on generated pixel images; no screenshot of user applications is stored.",
+  "readable": [
+    {
+      "layout": "top-bottom",
+      "scale": 1,
+      "width": 1280,
+      "height": 720,
+      "passed": true,
+      "category": null,
+      "ms": 772.2601,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.5875999999999806,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 770.2462,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 34.44660000241129
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 130.48660000276868
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 1
+        },
+        {
+          "stage": "classification",
+          "ms": 0.9634999999999536,
+          "status": "ok"
+        }
+      ],
+      "characters": 163
+    },
+    {
+      "layout": "two-blocks",
+      "scale": 1,
+      "width": 1280,
+      "height": 720,
+      "passed": true,
+      "category": null,
+      "ms": 90.97859999999991,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.09510000000000218,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 90.49019999999985,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 35.811999998259125
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 53.63339999894379
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.2982999999999265,
+          "status": "ok"
+        }
+      ],
+      "characters": 256
+    },
+    {
+      "layout": "small-text",
+      "scale": 1,
+      "width": 1280,
+      "height": 720,
+      "passed": false,
+      "category": "INCOMPLETE_TASK",
+      "ms": 106.19509999999991,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.06819999999993342,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 105.75610000000006,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 33.97020000193152
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 71.21619999816176
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.044399999999996,
+          "status": "ok"
+        },
+        {
+          "stage": "vision",
+          "ms": 0.27739999999994325,
+          "status": "ok"
+        }
+      ],
+      "characters": 156
+    },
+    {
+      "layout": "dark",
+      "scale": 1,
+      "width": 1280,
+      "height": 720,
+      "passed": true,
+      "category": null,
+      "ms": 90.2627,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.09629999999992833,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 90.07169999999996,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 34.52860000106739
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 54.81259999942267
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.03510000000005675,
+          "status": "ok"
+        }
+      ],
+      "characters": 163
+    },
+    {
+      "layout": "declarative",
+      "scale": 1,
+      "width": 1280,
+      "height": 720,
+      "passed": true,
+      "category": null,
+      "ms": 93.77629999999999,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.08780000000001564,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 93.58159999999998,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 33.55060000103549
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 59.50540000048932
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.0339000000001306,
+          "status": "ok"
+        }
+      ],
+      "characters": 55
+    },
+    {
+      "layout": "top-bottom",
+      "scale": 1.25,
+      "width": 1600,
+      "height": 900,
+      "passed": true,
+      "category": null,
+      "ms": 199.91279999999983,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.128800000000183,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 199.6968999999999,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 52.37380000107805
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 146.61139999952866
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.03459999999995489,
+          "status": "ok"
+        }
+      ],
+      "characters": 169
+    },
+    {
+      "layout": "two-blocks",
+      "scale": 1.25,
+      "width": 1600,
+      "height": 900,
+      "passed": true,
+      "category": null,
+      "ms": 162.3741,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.1146000000001095,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 162.12540000000013,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 52.539899999828776
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 108.79859999840846
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.04150000000004184,
+          "status": "ok"
+        }
+      ],
+      "characters": 264
+    },
+    {
+      "layout": "small-text",
+      "scale": 1.25,
+      "width": 1600,
+      "height": 900,
+      "passed": true,
+      "category": null,
+      "ms": 141.17640000000006,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.09619999999995343,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 140.98450000000003,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 52.50700000033248
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 87.6514000010502
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.038399999999910506,
+          "status": "ok"
+        }
+      ],
+      "characters": 168
+    },
+    {
+      "layout": "dark",
+      "scale": 1.25,
+      "width": 1600,
+      "height": 900,
+      "passed": true,
+      "category": null,
+      "ms": 156.44819999999982,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.11550000000011096,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 156.2283,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 52.281300002505304
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 103.21549999935087
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.0464999999999236,
+          "status": "ok"
+        }
+      ],
+      "characters": 169
+    },
+    {
+      "layout": "declarative",
+      "scale": 1.25,
+      "width": 1600,
+      "height": 900,
+      "passed": true,
+      "category": null,
+      "ms": 119.01040000000012,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.09390000000030341,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 118.7782000000002,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 52.443399999901885
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 65.72659999801544
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.03510000000005675,
+          "status": "ok"
+        }
+      ],
+      "characters": 56
+    },
+    {
+      "layout": "top-bottom",
+      "scale": 1.5,
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "category": null,
+      "ms": 257.3807999999999,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.1388000000001739,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 257.13290000000006,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 74.88050000029034
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 181.22589999984484
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.04329999999981737,
+          "status": "ok"
+        }
+      ],
+      "characters": 175
+    },
+    {
+      "layout": "two-blocks",
+      "scale": 1.5,
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "category": null,
+      "ms": 191.41859999999997,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.145799999999781,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 191.20119999999997,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 74.2869999994582
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 116.11450000054901
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.02750000000014552,
+          "status": "ok"
+        }
+      ],
+      "characters": 272
+    },
+    {
+      "layout": "small-text",
+      "scale": 1.5,
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "category": null,
+      "ms": 75.85730000000012,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.10869999999977153,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 75.67849999999999,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 74.62609999856795
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0.2907999987655785
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.022999999999683496,
+          "status": "ok"
+        }
+      ],
+      "characters": 175
+    },
+    {
+      "layout": "dark",
+      "scale": 1.5,
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "category": null,
+      "ms": 207.72829999999976,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.15650000000005093,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 207.4958999999999,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 75.1894999993965
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 131.47140000000945
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.02430000000003929,
+          "status": "ok"
+        }
+      ],
+      "characters": 175
+    },
+    {
+      "layout": "declarative",
+      "scale": 1.5,
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "category": null,
+      "ms": 147.81140000000005,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.1562999999996464,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 147.57669999999962,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 74.00109999798588
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 72.80620000165072
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.029199999999946158,
+          "status": "ok"
+        }
+      ],
+      "characters": 57
+    },
+    {
+      "layout": "top-bottom",
+      "scale": 2,
+      "width": 2560,
+      "height": 1440,
+      "passed": true,
+      "category": null,
+      "ms": 382.69389999999976,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.20400000000017826,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 382.3973000000001,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 136.98260000091977
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 244.39340000026277
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.029899999999997817,
+          "status": "ok"
+        }
+      ],
+      "characters": 187
+    },
+    {
+      "layout": "two-blocks",
+      "scale": 2,
+      "width": 2560,
+      "height": 1440,
+      "passed": true,
+      "category": null,
+      "ms": 242.17269999999962,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.22339999999985594,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 241.85280000000012,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 146.33620000313385
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 94.48429999974906
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.03809999999975844,
+          "status": "ok"
+        }
+      ],
+      "characters": 288
+    },
+    {
+      "layout": "small-text",
+      "scale": 2,
+      "width": 2560,
+      "height": 1440,
+      "passed": true,
+      "category": null,
+      "ms": 351.22800000000007,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.19719999999961146,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 350.9290000000001,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 146.67410000038217
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 203.15689999915776
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.03210000000035507,
+          "status": "ok"
+        }
+      ],
+      "characters": 187
+    },
+    {
+      "layout": "dark",
+      "scale": 2,
+      "width": 2560,
+      "height": 1440,
+      "passed": true,
+      "category": null,
+      "ms": 312.1781000000001,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.2437999999992826,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 311.83570000000054,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 149.78179999889107
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 160.87259999767412
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.030099999999947613,
+          "status": "ok"
+        }
+      ],
+      "characters": 187
+    },
+    {
+      "layout": "declarative",
+      "scale": 2,
+      "width": 2560,
+      "height": 1440,
+      "passed": true,
+      "category": null,
+      "ms": 248.08059999999932,
+      "stages": [
+        {
+          "stage": "imageHash",
+          "ms": 0.1908000000003085,
+          "status": "ok"
+        },
+        {
+          "stage": "ocr",
+          "ms": 247.8062,
+          "status": "ok"
+        },
+        {
+          "stage": "imagePreprocessing",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 152.06430000034743
+        },
+        {
+          "stage": "ocrInference",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 94.75579999707406
+        },
+        {
+          "stage": "ocrQueue",
+          "parent": "ocr",
+          "status": "ok",
+          "ms": 0
+        },
+        {
+          "stage": "classification",
+          "ms": 0.025099999999838474,
+          "status": "ok"
+        }
+      ],
+      "characters": 59
+    }
+  ],
+  "negative": [
+    {
+      "name": "partial-code",
+      "passed": true,
+      "category": "INCOMPLETE_TASK"
+    },
+    {
+      "name": "clipped",
+      "passed": true,
+      "category": "INCOMPLETE_TASK"
+    },
+    {
+      "name": "empty",
+      "passed": true,
+      "category": "NO_READABLE_CONTENT"
+    }
+  ],
+  "baseline": [
+    {
+      "layout": "top-bottom",
+      "scale": 2,
+      "extracted": true,
+      "ms": 382.91499999999996,
+      "characters": 335
+    },
+    {
+      "layout": "small-text",
+      "scale": 2,
+      "extracted": true,
+      "ms": 370.6817000000001,
+      "characters": 293
+    },
+    {
+      "layout": "declarative",
+      "scale": 2,
+      "extracted": false,
+      "ms": 361.4556999999995,
+      "characters": 0
+    }
+  ],
+  "additional": [
+    {
+      "name": "native-2560",
+      "passed": true,
+      "category": null,
+      "ms": 223.28690000000006
+    },
+    {
+      "name": "native-3840",
+      "passed": true,
+      "category": null,
+      "ms": 392.3931999999995
+    },
+    {
+      "name": "overlapping-scroll",
+      "passed": true,
+      "category": null
+    }
+  ],
+  "passRate": 0.95
+}

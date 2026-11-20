@@ -1,0 +1,436 @@
+{
+  "at": "2026-10-16T18:29:03.895Z",
+  "verifierReplayCorrections": 1,
+  "methodology": "The final deterministic verifier is replayed over retained raw candidates; model inference is not rerun for this replay. Internal open-book benchmark. Provisional keyword/criterion coverage is not semantic accuracy. Retrieval cards are available to the upgraded system. No accuracy percentage is certified by this report.",
+  "technical": {
+    "baseline": {
+      "answers": 420,
+      "provisionalPassRate": 0.20476190476190476,
+      "meanHeuristicScore": 48.52857142857143,
+      "detectedSeriousErrors": 2,
+      "transportErrors": 0,
+      "truncated": 0,
+      "referenceCorrections": 0,
+      "latencySamples": 402,
+      "ttftMedianMs": 124.5910000000149,
+      "ttftP95Ms": 150.023199999996,
+      "totalMedianMs": 1517.1986000000034,
+      "totalP95Ms": 3145.756700000027,
+      "outputTokenMedian": 45,
+      "runnerRssMaximumBytes": 71438336,
+      "sampledModelVramMaximumBytes": 3311423979
+    },
+    "upgraded": {
+      "answers": 420,
+      "provisionalPassRate": 0.5333333333333333,
+      "meanHeuristicScore": 72.5547619047619,
+      "detectedSeriousErrors": 0,
+      "transportErrors": 0,
+      "truncated": 0,
+      "referenceCorrections": 0,
+      "latencySamples": 420,
+      "ttftMedianMs": 233.39130000000296,
+      "ttftP95Ms": 270.36470000003465,
+      "totalMedianMs": 1634.953899999964,
+      "totalP95Ms": 3113.126500000013,
+      "outputTokenMedian": 47,
+      "runnerRssMaximumBytes": 73506816,
+      "sampledModelVramMaximumBytes": 3311423979
+    }
+  },
+  "adversarial": {
+    "baseline": {
+      "answers": 28,
+      "provisionalPassRate": 0.5357142857142857,
+      "meanHeuristicScore": 67.89285714285714,
+      "detectedSeriousErrors": 0,
+      "transportErrors": 0,
+      "truncated": 0,
+      "referenceCorrections": 0,
+      "latencySamples": 28,
+      "ttftMedianMs": 121.91769999999951,
+      "ttftP95Ms": 138.32909999999902,
+      "totalMedianMs": 1209.9357000000018,
+      "totalP95Ms": 2515.709499999999,
+      "outputTokenMedian": 41,
+      "runnerRssMaximumBytes": 64278528,
+      "sampledModelVramMaximumBytes": 3311423979
+    },
+    "upgraded": {
+      "answers": 28,
+      "provisionalPassRate": 0.32142857142857145,
+      "meanHeuristicScore": 61.142857142857146,
+      "detectedSeriousErrors": 0,
+      "transportErrors": 0,
+      "truncated": 0,
+      "referenceCorrections": 0,
+      "latencySamples": 28,
+      "ttftMedianMs": 239.02460000000065,
+      "ttftP95Ms": 258.60869999999977,
+      "totalMedianMs": 1147.6322000000005,
+      "totalP95Ms": 2706.8382999999994,
+      "outputTokenMedian": 30,
+      "runnerRssMaximumBytes": 68046848,
+      "sampledModelVramMaximumBytes": 3311423979
+    }
+  },
+  "domains": {
+    "algorithms": {
+      "baseline": {
+        "answers": 60,
+        "provisionalPassRate": 0.23333333333333334,
+        "meanHeuristicScore": 54,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 48,
+        "ttftMedianMs": 131.35039999999572,
+        "ttftP95Ms": 151.51650000000154,
+        "totalMedianMs": 1584.858699999997,
+        "totalP95Ms": 3118.993999999999,
+        "outputTokenMedian": 46,
+        "runnerRssMaximumBytes": 63717376,
+        "sampledModelVramMaximumBytes": 3311423979
+      },
+      "upgraded": {
+        "answers": 60,
+        "provisionalPassRate": 0.5333333333333333,
+        "meanHeuristicScore": 74.33333333333333,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 60,
+        "ttftMedianMs": 239.4204000000027,
+        "ttftP95Ms": 328.71870000000035,
+        "totalMedianMs": 1596.828300000001,
+        "totalP95Ms": 2926.1143999999986,
+        "outputTokenMedian": 46,
+        "runnerRssMaximumBytes": 66834432,
+        "sampledModelVramMaximumBytes": 3311423979
+      }
+    },
+    "distributed": {
+      "baseline": {
+        "answers": 60,
+        "provisionalPassRate": 0.38333333333333336,
+        "meanHeuristicScore": 56.1,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 54,
+        "ttftMedianMs": 125.09459999998217,
+        "ttftP95Ms": 165.5794000000169,
+        "totalMedianMs": 1738.4114999999874,
+        "totalP95Ms": 3787.564800000022,
+        "outputTokenMedian": 53,
+        "runnerRssMaximumBytes": 66252800,
+        "sampledModelVramMaximumBytes": 3311423979
+      },
+      "upgraded": {
+        "answers": 60,
+        "provisionalPassRate": 0.65,
+        "meanHeuristicScore": 75.95,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 60,
+        "ttftMedianMs": 229.74379999999655,
+        "ttftP95Ms": 282.6921000000002,
+        "totalMedianMs": 1638.7443000000058,
+        "totalP95Ms": 3345.7272999999986,
+        "outputTokenMedian": 46,
+        "runnerRssMaximumBytes": 68685824,
+        "sampledModelVramMaximumBytes": 3311423979
+      }
+    },
+    "git": {
+      "baseline": {
+        "answers": 60,
+        "provisionalPassRate": 0.1,
+        "meanHeuristicScore": 40.13333333333333,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 60,
+        "ttftMedianMs": 126.42460000002757,
+        "ttftP95Ms": 140.8976000000257,
+        "totalMedianMs": 1371.7478999999585,
+        "totalP95Ms": 2598.747399999993,
+        "outputTokenMedian": 39,
+        "runnerRssMaximumBytes": 68972544,
+        "sampledModelVramMaximumBytes": 3311423979
+      },
+      "upgraded": {
+        "answers": 60,
+        "provisionalPassRate": 0.5833333333333334,
+        "meanHeuristicScore": 73.61666666666666,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 60,
+        "ttftMedianMs": 238.93530000001192,
+        "ttftP95Ms": 281.7606000000087,
+        "totalMedianMs": 1521.0739999999932,
+        "totalP95Ms": 2811.5706000000064,
+        "outputTokenMedian": 43,
+        "runnerRssMaximumBytes": 71020544,
+        "sampledModelVramMaximumBytes": 3311423979
+      }
+    },
+    "node": {
+      "baseline": {
+        "answers": 60,
+        "provisionalPassRate": 0.13333333333333333,
+        "meanHeuristicScore": 47.2,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 60,
+        "ttftMedianMs": 122.93720000004396,
+        "ttftP95Ms": 164.10490000003483,
+        "totalMedianMs": 1440.4291000000085,
+        "totalP95Ms": 2760.261300000013,
+        "outputTokenMedian": 42,
+        "runnerRssMaximumBytes": 68939776,
+        "sampledModelVramMaximumBytes": 3311423979
+      },
+      "upgraded": {
+        "answers": 60,
+        "provisionalPassRate": 0.48333333333333334,
+        "meanHeuristicScore": 75.95,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 60,
+        "ttftMedianMs": 236.6807999999728,
+        "ttftP95Ms": 285.1518999999971,
+        "totalMedianMs": 1701.2604000000283,
+        "totalP95Ms": 3113.126500000013,
+        "outputTokenMedian": 47,
+        "runnerRssMaximumBytes": 72138752,
+        "sampledModelVramMaximumBytes": 3311423979
+      }
+    },
+    "rust": {
+      "baseline": {
+        "answers": 60,
+        "provisionalPassRate": 0.16666666666666666,
+        "meanHeuristicScore": 51.13333333333333,
+        "detectedSeriousErrors": 2,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 60,
+        "ttftMedianMs": 123.33899999997811,
+        "ttftP95Ms": 151.6142000000109,
+        "totalMedianMs": 1500.4563999999664,
+        "totalP95Ms": 2976.8217000000295,
+        "outputTokenMedian": 43,
+        "runnerRssMaximumBytes": 69328896,
+        "sampledModelVramMaximumBytes": 3311423979
+      },
+      "upgraded": {
+        "answers": 60,
+        "provisionalPassRate": 0.45,
+        "meanHeuristicScore": 69.91666666666667,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 60,
+        "ttftMedianMs": 219.14439999999013,
+        "ttftP95Ms": 260.86879999999655,
+        "totalMedianMs": 1387.0756999999867,
+        "totalP95Ms": 2574.678799999994,
+        "outputTokenMedian": 46,
+        "runnerRssMaximumBytes": 72433664,
+        "sampledModelVramMaximumBytes": 3311423979
+      }
+    },
+    "security": {
+      "baseline": {
+        "answers": 60,
+        "provisionalPassRate": 0.25,
+        "meanHeuristicScore": 50.86666666666667,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 60,
+        "ttftMedianMs": 121.28499999991618,
+        "ttftP95Ms": 135.53570000000764,
+        "totalMedianMs": 1529.0078000000212,
+        "totalP95Ms": 3322.318800000008,
+        "outputTokenMedian": 51,
+        "runnerRssMaximumBytes": 69943296,
+        "sampledModelVramMaximumBytes": 3311423979
+      },
+      "upgraded": {
+        "answers": 60,
+        "provisionalPassRate": 0.6,
+        "meanHeuristicScore": 75.21666666666667,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 60,
+        "ttftMedianMs": 237.9794000000693,
+        "ttftP95Ms": 258.88809999998193,
+        "totalMedianMs": 1698.653500000015,
+        "totalP95Ms": 2902.9472000000533,
+        "outputTokenMedian": 50,
+        "runnerRssMaximumBytes": 73064448,
+        "sampledModelVramMaximumBytes": 3311423979
+      }
+    },
+    "testing": {
+      "baseline": {
+        "answers": 60,
+        "provisionalPassRate": 0.16666666666666666,
+        "meanHeuristicScore": 40.266666666666666,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 60,
+        "ttftMedianMs": 124.52029999997467,
+        "ttftP95Ms": 145.31610000005458,
+        "totalMedianMs": 1453.5089000000153,
+        "totalP95Ms": 3017.4699000000255,
+        "outputTokenMedian": 42,
+        "runnerRssMaximumBytes": 71438336,
+        "sampledModelVramMaximumBytes": 3311423979
+      },
+      "upgraded": {
+        "answers": 60,
+        "provisionalPassRate": 0.43333333333333335,
+        "meanHeuristicScore": 62.9,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 60,
+        "ttftMedianMs": 231.1369999999879,
+        "ttftP95Ms": 261.3941000000341,
+        "totalMedianMs": 1737.1774000000441,
+        "totalP95Ms": 3070.473699999973,
+        "outputTokenMedian": 52,
+        "runnerRssMaximumBytes": 73506816,
+        "sampledModelVramMaximumBytes": 3311423979
+      }
+    }
+  },
+  "styles": {
+    "short": {
+      "baseline": {
+        "answers": 210,
+        "provisionalPassRate": 0.2523809523809524,
+        "meanHeuristicScore": 50.63333333333333,
+        "detectedSeriousErrors": 1,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 201,
+        "ttftMedianMs": 125.63410000002477,
+        "ttftP95Ms": 153.21189999999478,
+        "totalMedianMs": 1371.7478999999585,
+        "totalP95Ms": 2499.464099999983,
+        "outputTokenMedian": 41,
+        "runnerRssMaximumBytes": 71438336,
+        "sampledModelVramMaximumBytes": 3311423979
+      },
+      "upgraded": {
+        "answers": 210,
+        "provisionalPassRate": 0.5666666666666667,
+        "meanHeuristicScore": 75,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 210,
+        "ttftMedianMs": 233.28469999996014,
+        "ttftP95Ms": 270.4170999999624,
+        "totalMedianMs": 1577.0656000000308,
+        "totalP95Ms": 2682.9100000000035,
+        "outputTokenMedian": 46,
+        "runnerRssMaximumBytes": 73379840,
+        "sampledModelVramMaximumBytes": 3311423979
+      }
+    },
+    "extended": {
+      "baseline": {
+        "answers": 210,
+        "provisionalPassRate": 0.15714285714285714,
+        "meanHeuristicScore": 46.423809523809524,
+        "detectedSeriousErrors": 1,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 201,
+        "ttftMedianMs": 124.24790000001667,
+        "ttftP95Ms": 149.58819999999832,
+        "totalMedianMs": 1732.032600000035,
+        "totalP95Ms": 3627.3883000000496,
+        "outputTokenMedian": 52,
+        "runnerRssMaximumBytes": 71438336,
+        "sampledModelVramMaximumBytes": 0
+      },
+      "upgraded": {
+        "answers": 210,
+        "provisionalPassRate": 0.5,
+        "meanHeuristicScore": 70.10952380952381,
+        "detectedSeriousErrors": 0,
+        "transportErrors": 0,
+        "truncated": 0,
+        "referenceCorrections": 0,
+        "latencySamples": 210,
+        "ttftMedianMs": 233.39130000000296,
+        "ttftP95Ms": 267.610800000024,
+        "totalMedianMs": 1698.653500000015,
+        "totalP95Ms": 3345.7272999999986,
+        "outputTokenMedian": 49,
+        "runnerRssMaximumBytes": 73506816,
+        "sampledModelVramMaximumBytes": 0
+      }
+    }
+  },
+  "independentReview": {
+    "reviewed": 20,
+    "valid": 19,
+    "errors": 1,
+    "model": [
+      "qwen3:8b"
+    ],
+    "scope": "All automatically flagged serious errors and a stratified, risk-selected subset; selection-biased, not a random accuracy estimate.",
+    "automaticallyFlagged": 2,
+    "flaggedWithoutValidReview": [],
+    "seriousErrors": 4,
+    "byPhase": {
+      "baseline": {
+        "reviewed": 11,
+        "seriousErrors": 4
+      },
+      "upgraded": {
+        "reviewed": 8,
+        "seriousErrors": 0
+      }
+    }
+  },
+  "acceptance": {
+    "target": 0.95,
+    "met": false,
+    "reasons": [
+      "No exhaustive independent expert semantic review has been completed.",
+      "Automated coverage metrics must not be interpreted as a certified 95% technical accuracy result."
+    ]
+  },
+  "provisionalPassRateImprovementPoints": 32.857142857142854
+}

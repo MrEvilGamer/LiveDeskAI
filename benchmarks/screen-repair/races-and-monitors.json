@@ -1,0 +1,7 @@
+{
+  "baselineGenericFailureReproduced": true,
+  "baselineStaleReproduced": true,
+  "repairedStaleRejected": true,
+  "queuedPaintRejected": true,
+  "monitorAndDpiChecks": true
+}

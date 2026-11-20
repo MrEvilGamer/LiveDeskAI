@@ -1,0 +1,93 @@
+{
+  "at": "2026-10-16T18:55:40.555Z",
+  "artifact": "dist/LiveDeskAI.exe",
+  "bytes": 341106348,
+  "sha256": "3ade1b4794ce1e22907221e9fc437cd9722a5365ccc6b93028231c3d0e133fd4",
+  "packagedPracticeUiTest": true,
+  "matchedFiles": [
+    {
+      "path": "main.js",
+      "sha256": "f0b23ef0817b4ace130df6f7a6d248249124611315b935fc19bb0f4ac2026cf9"
+    },
+    {
+      "path": "preload.js",
+      "sha256": "3c4000acc9e63c82f2f2b229e03551525d5ffe7d08bd515ad5b43527fd3e13ce"
+    },
+    {
+      "path": "scripts\\screen-ocr.ps1",
+      "sha256": "afa09db4d6f8e301757d95f54187c1f24de65c31a7782c7d0561e77c238828b3"
+    },
+    {
+      "path": "src\\coach\\evaluator.js",
+      "sha256": "e0af3bdb4e1ae36b6bb9ba3aebf45fa920f0edfb9e7b42eb6ecc5a8fca831b24"
+    },
+    {
+      "path": "src\\coach\\knowledge.js",
+      "sha256": "74beab20f671151db0f2aa15f1106ba72c724dc32b5b307de553b4f26593533e"
+    },
+    {
+      "path": "src\\coach\\practice-cases.js",
+      "sha256": "0419527bfa80c5d68d1d950c4929250ec6eb4b333d297c1aecd13fc3d50d10e5"
+    },
+    {
+      "path": "src\\coach\\technical.js",
+      "sha256": "8368107a926add5874753417beb25ee96de8a4c2fa0241914b2c23233e514aac"
+    },
+    {
+      "path": "src\\overlay.css",
+      "sha256": "7b0dd8ac9445dc6c277f884f370baca18237d74386fe908b23515307e3cbbcf5"
+    },
+    {
+      "path": "src\\overlay.html",
+      "sha256": "6faf55f8f06f8b3ffd66404af7a1412d964a827f75c9e52827c18cae53e3a367"
+    },
+    {
+      "path": "src\\overlay.js",
+      "sha256": "bae7427cc9413549965bdd573a155c5c347fbb06f0336906ab68373001731847"
+    },
+    {
+      "path": "src\\practice.css",
+      "sha256": "5165d974294a147fbb1d7bbf807979d43c40763f38b3de46e74c79912cfaea2d"
+    },
+    {
+      "path": "src\\practice.html",
+      "sha256": "ee55dadbe2e3490466ca87a890ffdb2515072efa302139e5a6ece298c7c8380e"
+    },
+    {
+      "path": "src\\practice.js",
+      "sha256": "84be1b299c34564eaf51c835b02ab6a13339123b87dfedf8152e2c11fb4630a5"
+    },
+    {
+      "path": "src\\renderer\\audio.js",
+      "sha256": "2d376099273feedc04d3429070928717e7eac82da30d1502c3d886a6e0e2c30e"
+    },
+    {
+      "path": "src\\renderer\\humanize.js",
+      "sha256": "a2e3c3fcdf27f763ceadb869adb55cafcc49b72bba615f40705a144ef1fccdcd"
+    },
+    {
+      "path": "src\\renderer\\live.js",
+      "sha256": "c6aeedcf16987c02710388f68a19c85d3042a885580219f770955481027e7b87"
+    },
+    {
+      "path": "src\\renderer\\llm.js",
+      "sha256": "4ea402093887b4691dd5405f19f9195ebef1025c6aed91ff6f2c205730659725"
+    },
+    {
+      "path": "src\\scrollbar.css",
+      "sha256": "2e8a755764bdec37d27e4444a23514a95394db69fb31a745146739b09a25ca83"
+    },
+    {
+      "path": "src\\settings.css",
+      "sha256": "37cef0b37227916afa23c8306c96ee076e6e48b22b2e47dbf0578c6de3960602"
+    },
+    {
+      "path": "src\\settings.html",
+      "sha256": "e63a9c0c505c56c66e0c4b1e1369f54175bb0fdaf2fbad1a51ae4c9179b31be8"
+    },
+    {
+      "path": "src\\settings.js",
+      "sha256": "9cd0be1948e851c0e56a4b6c8ae971f0e7c85edb0d0c06aebc3d8efec52b1c14"
+    }
+  ]
+}

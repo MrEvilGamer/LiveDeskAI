@@ -1,0 +1,305 @@
+12.3 Graph Traversal
+Next:
+12.4 Discussion and Exercises
+Up:
+12. Graphs
+Previous:
+12.2 AdjacencyLists: A Graph
+Contents
+Index
+Subsections
+12
+.
+3
+.
+1
+Breadth-First Search
+12
+.
+3
+.
+2
+Depth-First Search
+12
+.
+3
+Graph Traversal
+In this section we present two algorithms for exploring a graph,
+starting at one of its vertices,
+, and finding all vertices that
+are reachable from
+.  Both of these algorithms are best suited to
+graphs represented using an adjacency list representation.  Therefore,
+when analyzing these algorithms we will assume that the underlying
+representation is an AdjacencyLists.
+12
+.
+3
+.
+1
+Breadth-First Search
+The
+bread-first-search
+algorithm starts at a vertex
+and visits,
+first the neighbours of
+, then the neighbours of the neighbours of
+,
+then the neighbours of the neighbours of the neighbours of
+, and so on.
+This algorithm is a generalization of the breadth-first traversal
+algorithm for binary trees (Section
+6.1.2
+), and is
+very similar; it uses a queue,
+, that initially contains only
+.
+It then repeatedly extracts an element from
+and adds its neighbours
+to
+, provided that these neighbours have never been in
+before.
+The only major difference between the breadth-first-search algorithm
+for graphs and the one for trees is that the algorithm for graphs has
+to ensure that it does not add the same vertex to
+more than once.
+It does this by using an auxiliary boolean array,
+, that tracks
+which vertices have already been discovered.
+An example of running
+on the graph from Figure
+12.1
+is shown in Figure
+12.4
+.  Different executions are possible,
+depending on the ordering of the adjacency lists; Figure
+12.4
+uses the adjacency lists in Figure
+12.3
+.
+Figure 12.4:
+An example of bread-first-search starting at node 0. Nodes are
+  labelled with the order in which they are added to
+.  Edges that
+  result in nodes being added to
+are drawn in black, other edges
+  are drawn in grey.
+Analyzing the running-time of the
+routine is fairly
+straightforward.  The use of the
+array ensures that no vertex is
+added to
+more than once.  Adding (and later removing) each vertex
+from
+takes constant time per vertex for a total of
+time.
+Since each vertex is processed by the inner loop at most once, each
+adjacency list is processed at most once, so each edge of
+is processed
+at most once.  This processing, which is done in the inner loop takes
+constant time per iteration, for a total of
+time.  Therefore,
+the entire algorithm runs in
+time.
+The following theorem summarizes the performance of the
+algorithm.
+Theorem
+12
+..
+3
+When given as input a Graph,
+, that is implemented using the
+  AdjacencyLists data structure, the
+algorithm runs in
+time.
+A breadth-first traversal has some very special properties.  Calling
+will eventually enqueue (and eventually dequeue) every vertex
+such that there is a directed path from
+to
+.  Moreover,
+the vertices at distance 0 from
+(
+itself) will enter
+before
+the vertices at distance 1, which will enter
+before the vertices at
+distance 2, and so on.  Thus, the
+method visits vertices
+in increasing order of distance from
+and vertices that cannot be
+reached from
+are never visited at all.
+A particularly useful application of the breadth-first-search algorithm
+is, therefore, in computing shortest paths.  To compute the shortest
+path from
+to every other vertex, we use a variant of
+that uses an auxilliary array,
+, of length
+.  When a new vertex
+is added to
+, we set
+.  In this way,
+becomes the
+second last node on a shortest path from
+to
+.  Repeating this,
+by taking
+,
+, and so on we can reconstruct the
+(reversal of) a shortest path from
+to
+.
+12
+.
+3
+.
+2
+Depth-First Search
+The
+depth-first-search
+algorithm is similar to the standard
+algorithm for traversing binary trees;  it first fully explores one
+subtree before returning to the current node and then exploring the
+other subtree.  Another way to think of depth-first-search is by saying
+that it is similar to breadth-first search except that it uses a stack
+instead of a queue.
+During the execution of the depth-first-search algorithm, each vertex,
+, is assigned a colour,
+:
+if we have never seen
+the vertex before,
+if we are currently visiting that vertex,
+and
+if we are done visiting that vertex.  The easiest way to
+think of depth-first-search is as a recursive algorithm.  It starts by
+visiting
+.  When visiting a vertex
+, we first mark
+as
+.
+Next, we scan
+'s adjacency list and recursively visit any white vertex
+we find in this list.  Finally, we are done processing
+, so we colour
+black and return.
+An example of the execution of this algorithm is shown in Figure
+12.5
+.
+Figure 12.5:
+An example of depth-first-search starting at node 0. Nodes are
+  labelled with the order in which they are processed.  Edges that
+  result in a recursive call are drawn in black, other edges
+  are drawn in
+.
+Although depth-first-search may best be thought of as a recursive
+algorithm, recursion is not the best way to implement it. Indeed, the code
+given above will fail for many large graphs by causing a stack overflow.
+An alternative implementation is to replace the recursion stack with an
+explicit stack,
+.  The following implementation does just that:
+In the preceding code, when the next vertex,
+, is processed,
+is coloured
+and then replaced, on the stack, with its adjacent vertices.
+During the next iteration, one of these vertices will be visited.
+Not surprisingly, the running times of
+and
+are the
+same as that of
+:
+Theorem
+12
+..
+4
+When given as input a Graph,
+, that is implemented using the
+  AdjacencyLists data structure, the
+and
+algorithms
+  each run in
+time.
+As with the breadth-first-search algorithm, there is an underlying
+tree associated with each execution of depth-first-search.  When a node
+goes from
+to
+, this is because
+was called recursively while processing some node
+.  (In the case
+of
+algorithm,
+is one of the nodes that replaced
+on the stack.)  If we think of
+as the parent of
+, then we obtain
+a tree rooted at
+.  In Figure
+12.5
+, this tree is a path from
+vertex 0 to vertex 11.
+An important property of the depth-first-search algorithm is the
+following: Suppose that when node
+is coloured
+, there exists a path
+from
+to some other node
+that uses only white vertices.  Then
+will be coloured first
+then
+before
+is coloured
+.
+(This can be proven by contradiction, by considering any path
+from
+to
+.)
+One application of this property is the detection of cycles.
+Refer
+to Figure
+12.6
+.  Consider some cycle,
+, that can be reached
+from
+.  Let
+be the first node of
+that is coloured
+,
+and let
+be the node that precedes
+on the cycle
+.  Then,
+by the above property,
+will be coloured
+and the edge
+will be considered by the algorithm while
+is still
+.  Thus,
+the algorithm can conclude that there is a path,
+, from
+to
+in the depth-first-search tree and the edge
+exists.  Therefore,
+is also a cycle.
+Figure 12.6:
+The depth-first-search algorithm can be used to detect cycles
+  in
+. The node
+is coloured
+while
+is still
+.  This
+  implies that there is a path,
+, from
+to
+in the depth-first-search
+  tree, and the edge
+implies that
+is also a cycle.
+Next:
+12.4 Discussion and Exercises
+Up:
+12. Graphs
+Previous:
+12.2 AdjacencyLists: A Graph
+Contents
+Index
+opendatastructures.org
